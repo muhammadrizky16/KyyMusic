@@ -27,6 +27,16 @@ def time_to_seconds(time):
 )
 async def mpthree(_, message: Message):
     chat_id = message.chat.id
+    if not await is_served_chat(chat_id):
+        await message.reply_text(
+            f"""
+**Grup ini belum dapat ijin.**
+
+Untuk mendapatkan ijin menggunakan bot.
+Silahkan Pm Daftar Admin Saya [Dari Sini](https://t.me/{BOT_USERNAME}?start=sudolist)
+"""
+        )
+        return await app.leave_chat(chat_id)
     if message.sender_chat:
         return await message.reply_text(
             """
