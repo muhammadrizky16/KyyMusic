@@ -4,9 +4,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 def play_markup(videoid, user_id):
     buttons = [
         [
-            InlineKeyboardButton(text="• ᴄʜᴀɴɴᴇʟ​", url="https://t.me/ahhsudahlahhh"),
+            InlineKeyboardButton(text="• Cʜᴀɴɴᴇʟ​", url="https://t.me/ahhsudahlahhh"),
             InlineKeyboardButton(
-                text="ᴍᴇɴᴜ •", callback_data=f"other {videoid}|{user_id}"
+                text="Mᴇɴᴜ •", callback_data=f"other {videoid}|{user_id}"
             ),
         ],
     ]
@@ -23,17 +23,17 @@ def others_markup(videoid, user_id):
         ],
         [
             InlineKeyboardButton(
-                text="• ᴜɴᴅᴜʜ ᴀᴜᴅɪᴏ", callback_data=f"gets audio|{videoid}|{user_id}"
+                text="• Uɴᴅᴜʜ Aᴜᴅɪᴏ", callback_data=f"gets audio|{videoid}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="ᴜɴᴅᴜʜ ᴠɪᴅᴇᴏ •", callback_data=f"gets video|{videoid}|{user_id}"
+                text="Uɴᴅᴜʜ Vɪᴅᴇᴏ •", callback_data=f"gets video|{videoid}|{user_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="• ᴋᴇᴍʙᴀʟɪ", callback_data=f"goback {videoid}|{user_id}"
+                text="• Kᴇᴍʙᴀʟɪ", callback_data=f"goback {videoid}|{user_id}"
             ),
-            InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ •", callback_data=f"close2"),
+            InlineKeyboardButton(text="Tᴜᴛᴜᴘ •", callback_data=f"close2"),
         ],
     ]
     return buttons
@@ -47,7 +47,7 @@ play_keyboard = InlineKeyboardMarkup(
             InlineKeyboardButton("⏭️", callback_data="skipvc"),
             InlineKeyboardButton("⏹️", callback_data="stopvc"),
         ],
-        [InlineKeyboardButton("• ᴛᴜᴛᴜᴘ •", callback_data="close")],
+        [InlineKeyboardButton("• Tᴜᴛᴜᴘ •", callback_data="close")],
     ]
 )
 
@@ -60,7 +60,7 @@ def audio_markup(videoid, user_id):
             InlineKeyboardButton(text="⏭️", callback_data=f"skipvc2"),
             InlineKeyboardButton(text="⏹️", callback_data=f"stopvc2"),
         ],
-        [InlineKeyboardButton(text="• ᴛᴜᴛᴜᴘ •", callback_data="close2")],
+        [InlineKeyboardButton(text="• Tᴜᴛᴜᴘ •", callback_data="close2")],
     ]
     return buttons
 
@@ -102,7 +102,7 @@ def search_markup(
         [InlineKeyboardButton(text="➡️", callback_data=f"popat 1|{query}|{user_id}")],
         [
             InlineKeyboardButton(
-                text="• ᴛᴜᴛᴜᴘ •", callback_data=f"ppcl2 smex|{user_id}"
+                text="• Tᴜᴛᴜᴘ •", callback_data=f"ppcl2 smex|{user_id}"
             ),
         ],
     ]
@@ -146,7 +146,7 @@ def search_markup2(
         [
             InlineKeyboardButton(text="⬅️", callback_data=f"popat 2|{query}|{user_id}"),
         ],
-        [InlineKeyboardButton(text="• ᴛᴜᴛᴜᴘ •", callback_data=f"ppcl2 smex|{user_id}")],
+        [InlineKeyboardButton(text="• Tᴜᴛᴜᴘ •", callback_data=f"ppcl2 smex|{user_id}")],
     ]
     return buttons
 
@@ -154,7 +154,7 @@ def search_markup2(
 def personal_markup(link):
     buttons = [
         [InlineKeyboardButton(text="• ᴛᴏɴᴛᴏɴ ᴅɪ ʏᴏᴜᴛᴜʙᴇ •", url=f"{link}")],
-        [InlineKeyboardButton(text="• ᴛᴜᴛᴜᴘ •", callback_data=f"close2")],
+        [InlineKeyboardButton(text="• Tᴜᴛᴜᴘ •", callback_data=f"close2")],
     ]
     return buttons
 
@@ -163,18 +163,18 @@ start_keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "📚 Daftar Perintah 📚", url="https://telegra.ph/ᴷʸʸ-11-21-2"
+                "📚 Cᴏᴍᴍᴀɴᴅ 📚", url="https://telegra.ph/ᴷʸʸ-11-21-2"
             )
         ],
-        [InlineKeyboardButton("• ᴛᴜᴛᴜᴘ •", callback_data="close2")],
+        [InlineKeyboardButton("• Tᴜᴛᴜᴘ •", callback_data="close2")],
     ]
 )
 
 confirm_keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("ʏᴀ", callback_data="cbdel"),
-            InlineKeyboardButton("ᴛɪᴅᴀᴋ", callback_data="close2"),
+            InlineKeyboardButton("Yᴀ", callback_data="cbdel"),
+            InlineKeyboardButton("Tɪᴅᴀᴋ", callback_data="close2"),
         ]
     ]
 )
@@ -182,12 +182,12 @@ confirm_keyboard = InlineKeyboardMarkup(
 confirm_group_keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("ʏᴀ", callback_data="cbgroupdel"),
-            InlineKeyboardButton("ᴛɪᴅᴀᴋ", callback_data="close2"),
+            InlineKeyboardButton("Yᴀ", callback_data="cbgroupdel"),
+            InlineKeyboardButton("Tɪᴅᴀᴋ", callback_data="close2"),
         ]
     ]
 )
 
 close_keyboard = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("• ᴛᴜᴛᴜᴘ •", callback_data="close2")]]
+    [[InlineKeyboardButton("• Tᴜᴛᴜᴘ •", callback_data="close2")]]
 )
