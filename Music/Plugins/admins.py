@@ -45,6 +45,7 @@ async def member_permissions(chat_id: int, user_id: int):
 
 
 @app.on_message(filters.command("cleandb"))
+@authorized_users_only
 async def stop_cmd(_, message):
     chat_id = message.chat.id
     try:
@@ -60,6 +61,7 @@ async def stop_cmd(_, message):
 
 
 @app.on_message(filters.command("pause"))
+@authorized_users_only
 async def pause_cmd(_, message):
     if message.sender_chat:
         return await message.reply_text(
@@ -85,6 +87,7 @@ async def pause_cmd(_, message):
 
 
 @app.on_message(filters.command("resume"))
+@authorized_users_only
 async def stop_cmd(_, message):
     if message.sender_chat:
         return await message.reply_text(
@@ -111,6 +114,7 @@ async def stop_cmd(_, message):
 
 
 @app.on_message(filters.command(["stop", "end"]))
+@authorized_users_only
 async def stop_cmd(_, message):
     if message.sender_chat:
         return await message.reply_text(
@@ -139,6 +143,7 @@ async def stop_cmd(_, message):
 
 
 @app.on_message(filters.command("skip"))
+@authorized_users_only
 async def stop_cmd(_, message):
     if message.sender_chat:
         return await message.reply_text(
