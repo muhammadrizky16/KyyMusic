@@ -74,8 +74,8 @@ async def welcome(_, message: Message):
 💡 **Jangan lupa untuk menjadikan saya sebagai admin di grup ini**
 """,
                     reply_markup=InlineKeyboardMarkup(out[1]),
+                    disable_web_page_preview=True
                 )
-                disable_web_page_preview=True
                 return
         except BaseException:
             return
@@ -108,8 +108,8 @@ Musik itu hidup.
 Untuk bantuan silahkan klik tombol dibawah.
 """,
         reply_markup=InlineKeyboardMarkup(out[1]),
+        disable_web_page_preview=True
     )
-    disable_web_page_preview=True
     return
 
 
