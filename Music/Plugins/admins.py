@@ -39,13 +39,13 @@ from Music import (
     ASSMENTION,
 )
 from Music.MusicUtilities.tgcallsrun import (
-    music,
+    clear,
     convert,
     download,
     clear,
     get,
     is_empty,
-    put,
+    music,
     task_done,
     smexy,
 )
