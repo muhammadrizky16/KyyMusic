@@ -32,8 +32,10 @@ pstart_markup = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ​ ➕",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-            )
+                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",)
+            InlineKeyboardButton(
+                "✨ᴜᴘᴅᴀᴛᴇs✨​​",
+                url=f"https://t.me/ahhsudahlahhh,)
         ],
         [
             InlineKeyboardButton(
