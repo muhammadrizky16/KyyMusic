@@ -1,5 +1,13 @@
 import yt_dlp
-from Music import ASSID, BOT_ID, BOT_NAME, BOT_USERNAME, OWNER, SUDOERS, app
+from Music import (
+    ASSID,
+    BOT_ID,
+    BOT_NAME,
+    BOT_USERNAME,
+    OWNER,
+    SUDOERS,
+    app,
+)
 from Music.MusicUtilities.database.chats import is_served_chat
 from Music.MusicUtilities.database.queue import remove_active_chat
 from Music.MusicUtilities.database.sudo import get_sudoers
@@ -7,16 +15,18 @@ from Music.MusicUtilities.helpers.inline import personal_markup
 from Music.MusicUtilities.helpers.thumbnails import down_thumb
 from Music.MusicUtilities.helpers.ytdl import ytdl_opts
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram.types import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    Message,
+)
 
 
 def start_pannel():
     buttons = [
         [
-            InlineKeyboardButton(
-                text="📚 ᴄᴏᴍᴍᴀɴᴅ​ 📚",
-                url="https://telegra.ph/ᴷʸʸ-11-22",
-            )
+            InlineKeyboardButton("📚 ᴄᴏᴍᴍᴀɴᴅ​", url="https://telegra.ph/ᴷʸʸ-11-22"),
+            InlineKeyboardButton("✨ᴜᴘᴅᴀᴛᴇs ✨", url=f"https://t.me/ahhsudahlahhh"),
         ],
     ]
     return (
@@ -29,14 +39,11 @@ pstart_markup = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ​ ➕",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-            )
+                "➕ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ᴛᴏ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
         ],
         [
-            InlineKeyboardButton(
-                "📚 ᴄᴏᴍᴍᴀɴᴅ​", url="https://telegra.ph/ᴷʸʸ-11-22"
-            )
+            InlineKeyboardButton("📚 ᴄᴏᴍᴍᴀɴᴅ​", url="https://telegra.ph/ᴷʸʸ-11-22"),
+            InlineKeyboardButton("✨ᴜᴘᴅᴀᴛᴇs ✨", url=f"https://t.me/ahhsudahlahhh"),
         ],
     ]
 )
