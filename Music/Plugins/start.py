@@ -15,8 +15,10 @@ def start_pannel():
         [
             InlineKeyboardButton(
                 text="📚 ᴄᴏᴍᴍᴀɴᴅ​ 📚",
-                url="https://telegra.ph/ᴷʸʸ-11-22",
-            )
+                url="https://telegra.ph/ᴷʸʸ-11-22",)
+            InlineKeyboardButton(
+                text"✨ᴜᴘᴅᴀᴛᴇs✨​​",
+                url="https://t.me/ahhsudahlahhh,)
         ],
     ]
     return (
