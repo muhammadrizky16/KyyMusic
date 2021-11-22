@@ -124,9 +124,8 @@ async def play(_, message: Message):
 
 💬 [{BOT_NAME}](t.me/{BOT_USERNAME}) memungkinkan anda untuk memutar musik pada grup melalui obrolan suara yang baru di Telegram!
 
-💡 Untuk Mengetahui Semua Perintah Bot Dan Bagaimana Cara Kerja Nya Dengan Menekan Tombol » 📚 Perintah!
+💡 Untuk Mengetahui Semua Perintah Bot Dan Bagaimana Cara Kerja Nya Dengan Menekan Tombol » 📚 ᴄᴏᴍᴍᴀɴᴅ​!**
 
-✅ Jika Anda Menginginkan Saya Bergabung Di Grup Anda Silahkan Kirim ID Grup Telegram Anda Kepada Admin [cek daftar admin](https://t.me/{BOT_USERNAME}?start=sudolist)**
 """,
             parse_mode="markdown",
             reply_markup=pstart_markup,
