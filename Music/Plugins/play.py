@@ -746,6 +746,7 @@ async def popat(_, CallbackQuery):
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
+        disable_web_page_preview=True
         return
     if i == 2:
         buttons = search_markup(
@@ -788,4 +789,5 @@ async def popat(_, CallbackQuery):
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
+        disable_web_page_preview=True
         return
