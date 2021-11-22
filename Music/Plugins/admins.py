@@ -125,7 +125,7 @@ async def stop_cmd(_, message):
     else:
         await music_on(chat_id)
         await music.pytgcalls.resume_stream(chat_id)
-        await message.reply_text(f"🎧 Voicechat Resumed by {checking}!")
+        await message.reply_text(f"**🎧 Voicechat Resumed By {checking}!**")
 
 @app.on_message(filters.command(["end", f"end@{BOT_USERNAME}", "e"]))
 async def stop_cmd(_, message): 
@@ -144,7 +144,7 @@ async def stop_cmd(_, message):
             pass                        
         await remove_active_chat(chat_id)
         await music.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text(f"🎧 Voicechat End/Stopped by {checking}!") 
+        await message.reply_text(f"**🎧 Voicechat End/Stopped By {checking}!**") 
     else:
         return await message.reply_text("I dont think if something's playing on voice chat")
     
