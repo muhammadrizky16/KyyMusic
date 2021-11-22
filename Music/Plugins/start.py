@@ -75,6 +75,7 @@ async def welcome(_, message: Message):
 """,
                     reply_markup=InlineKeyboardMarkup(out[1]),
                 )
+                disable_web_page_preview=True
                 return
         except BaseException:
             return
@@ -108,6 +109,7 @@ Untuk bantuan silahkan klik tombol dibawah.
 """,
         reply_markup=InlineKeyboardMarkup(out[1]),
     )
+    disable_web_page_preview=True
     return
 
 
