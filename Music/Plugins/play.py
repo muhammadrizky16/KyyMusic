@@ -194,7 +194,7 @@ Unban terlebih dahulu untuk menggunakan
             else file_name,
         )
         title = "Audio Yang Dipilih Dari Telegram"
-        link = "https://t.me/GroupMusicRandom"
+        link = "https://t.me/ahhsudahlahhh"
         thumb = "cache/Audio.png"
         videoid = "smex1"
     elif url:
@@ -315,7 +315,7 @@ Unban terlebih dahulu untuk menggunakan
 <b>❌ Lagu tidak ditemukan atau anda tidak menulis judul lagu dengan benar
 
 ✅ Contoh Menggunakan Bot
-`/play armada halu boss`
+`/play hal hebat`
 """,
             )
             return
