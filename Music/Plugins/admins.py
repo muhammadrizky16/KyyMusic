@@ -104,7 +104,7 @@ async def stop_cmd(_, message):
 @app.on_message(filters.command(["pause", f"pause@{BOT_USERNAME}", "ps"]))
 async def pause_cmd(_, message): 
     if message.sender_chat:
-        return await message.reply_text("kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
+        return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
     permission = "can_manage_voice_chats"
     m = await adminsOnly(permission, message)
     if m == 1:
@@ -122,7 +122,7 @@ async def pause_cmd(_, message):
 @app.on_message(filters.command(["resume", f"resume@{BOT_USERNAME}", "rs"]))
 async def stop_cmd(_, message): 
     if message.sender_chat:
-        return await message.reply_text("kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
+        return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
     permission = "can_manage_voice_chats"
     m = await adminsOnly(permission, message)
     if m == 1:
@@ -141,7 +141,7 @@ async def stop_cmd(_, message):
 @app.on_message(filters.command(["end", f"end@{BOT_USERNAME}", "e"]))
 async def stop_cmd(_, message): 
     if message.sender_chat:
-        return await message.reply_text("kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
+        return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
     permission = "can_manage_voice_chats"
     m = await adminsOnly(permission, message)
     if m == 1:
@@ -255,10 +255,18 @@ async def stop_cmd(_, message):
                 await mystic.delete()
                 semx = await app.get_users(userid)
                 await message.reply_photo(
-                photo= thumb,
-                reply_markup=InlineKeyboardMarkup(buttons),    
-                caption=(f"<b>__Skipped Voice Chat__</b>\n\n🎥 <b>__Started Playing:__ </b>[{title[:25]}]({url}) \n⏳ <b>__Duration:__</b> {duration} Mins\n👤 **__Requested by:__** {semx.mention}")
-            )   
+                photo=thumb,
+                    reply_markup=InlineKeyboardMarkup(buttons),
+                    caption=(
+                        f"""
+<b>⏭️ Melewati lagu</b>
+
+<b>🏷 Nama:</b>[{title[:25]}]({url})
+<b>⏱️ Durasi:</b> {duration}
+<b>🎧 Atas permintaan:</b> {semx.mention}
+"""
+                    ),
+                )
                 os.remove(thumb)
             else:      
                 await music.pytgcalls.change_stream(
@@ -286,7 +294,13 @@ async def stop_cmd(_, message):
                     buttons = play_markup(videoid, user_id)
                 await message.reply_photo(
                 photo=f"downloads/{_chat_}final.png",
-                reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"<b>__Skipped Voice Chat__</b>\n\n🎥 <b>__Started Playing:__</b> {title} \n⏳ <b>__Duration:__</b> {duration} \n👤 <b>__Requested by:__ </b> {username}",
+                    reply_markup=InlineKeyboardMarkup(buttons),
+                    caption=f"""
+<b>⏭️ Melewati lagu</b>
+
+<b>🏷️ Nama:</b> {title}
+<b>⏱️ Durasi:</b> {duration}
+<b>🎧 Atas permintaan</b> {username}
+""",
                 )
                 return
