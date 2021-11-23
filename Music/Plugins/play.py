@@ -5,7 +5,15 @@ import shutil
 from os import path
 
 import yt_dlp
-from Music import ASSID, ASSNAME, ASSUSERNAME, BOT_ID, BOT_NAME, BOT_USERNAME, app
+from Music import (
+    ASSID,
+    ASSNAME,
+    ASSUSERNAME,
+    BOT_ID,
+    BOT_NAME,
+    BOT_USERNAME,
+    app,
+)
 from Music.config import DURATION_LIMIT
 from Music.MusicUtilities.database.chats import is_served_chat
 from Music.MusicUtilities.database.onoff import is_on_off
