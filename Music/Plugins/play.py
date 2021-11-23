@@ -789,3 +789,17 @@ async def popat(_, CallbackQuery):
             reply_markup=InlineKeyboardMarkup(buttons),disable_web_page_preview=True
         )
         return
+
+
+@app.on_message(filters.command("playlist"))
+async def play_playlist_cmd(_, message):
+    thumb ="cache/playlistthumb.jpg"
+    user_id = message.from_user.id
+    user_name = message.from_user.first_name
+    buttons = playlist_markup(user_name, user_id)
+    await message.reply_photo(
+    photo=thumb,
+    caption=("**__Music's Playlist Feature__**\n\nSelect the Playlist you want to play!."),
+    reply_markup=InlineKeyboardMarkup(buttons),
+    )
+    return
