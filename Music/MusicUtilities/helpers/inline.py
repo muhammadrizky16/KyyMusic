@@ -88,19 +88,19 @@ def audio_markup(videoid, user_id):
 def search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query):
     buttons= [
             [
-                InlineKeyboardButton(text="⓵", callback_data=f'Music2 {ID1}|{duration1}|{user_id}'),
-                InlineKeyboardButton(text="⓶", callback_data=f'Music2 {ID2}|{duration2}|{user_id}'),
-                InlineKeyboardButton(text="⓷", callback_data=f'Music2 {ID3}|{duration3}|{user_id}')
+                InlineKeyboardButton(text="¹", callback_data=f'Music2 {ID1}|{duration1}|{user_id}'),
+                InlineKeyboardButton(text="²", callback_data=f'Music2 {ID2}|{duration2}|{user_id}'),
+                InlineKeyboardButton(text="³", callback_data=f'Music2 {ID3}|{duration3}|{user_id}')
             ],
             [ 
-                InlineKeyboardButton(text="⓸", callback_data=f'Music2 {ID4}|{duration4}|{user_id}'),
-                InlineKeyboardButton(text="⓹", callback_data=f'Music2 {ID5}|{duration5}|{user_id}')
+                InlineKeyboardButton(text="⁴", callback_data=f'Music2 {ID4}|{duration4}|{user_id}'),
+                InlineKeyboardButton(text="⁵", callback_data=f'Music2 {ID5}|{duration5}|{user_id}')
             ],
             [ 
                 
-                InlineKeyboardButton(text="⌦", callback_data=f'popat 1|{query}|{user_id}'), 
+                InlineKeyboardButton(text="⌫", callback_data=f'popat 1|{query}|{user_id}'), 
                 InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ​", callback_data=f"ppcl2 smex|{user_id}") ,
-                InlineKeyboardButton(text="⌫", callback_data=f'popat 1|{query}|{user_id}')             
+                InlineKeyboardButton(text="⌦", callback_data=f'popat 1|{query}|{user_id}')             
             ],
         ]
     return buttons   
@@ -108,13 +108,13 @@ def search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, dura
 def search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query):
     buttons= [
             [
-                InlineKeyboardButton(text="⓺", callback_data=f'Music2 {ID6}|{duration6}|{user_id}'),
-                InlineKeyboardButton(text="⓻", callback_data=f'Music2 {ID7}|{duration7}|{user_id}'),
-                InlineKeyboardButton(text="⓼", callback_data=f'Music2 {ID8}|{duration8}|{user_id}')
+                InlineKeyboardButton(text="⁶", callback_data=f'Music2 {ID6}|{duration6}|{user_id}'),
+                InlineKeyboardButton(text="⁷", callback_data=f'Music2 {ID7}|{duration7}|{user_id}'),
+                InlineKeyboardButton(text="⁸", callback_data=f'Music2 {ID8}|{duration8}|{user_id}')
             ],
             [ 
-                InlineKeyboardButton(text="⓽", callback_data=f'Music2 {ID9}|{duration9}|{user_id}'),
-                InlineKeyboardButton(text="⓾", callback_data=f'Music2 {ID10}|{duration10}|{user_id}')
+                InlineKeyboardButton(text="⁹", callback_data=f'Music2 {ID9}|{duration9}|{user_id}'),
+                InlineKeyboardButton(text="¹⁰", callback_data=f'Music2 {ID10}|{duration10}|{user_id}')
             ],
             [ 
                 
