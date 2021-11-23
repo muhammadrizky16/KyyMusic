@@ -744,8 +744,7 @@ async def popat(_, CallbackQuery):
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})
 └ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
-            reply_markup=InlineKeyboardMarkup(buttons),
-            disable_web_page_preview=True
+            reply_markup=InlineKeyboardMarkup(buttons),disable_web_page_preview=True
         )
         return
     if i == 2:
@@ -787,7 +786,6 @@ async def popat(_, CallbackQuery):
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})
 └ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
-            reply_markup=InlineKeyboardMarkup(buttons),
-            disable_web_page_preview=True
+            reply_markup=InlineKeyboardMarkup(buttons),disable_web_page_preview=True
         )
         return
