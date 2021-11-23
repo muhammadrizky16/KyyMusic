@@ -724,25 +724,24 @@ async def popat(_, CallbackQuery):
             f"""
 <b>✨ Silahkan pilih lagu yang ingin anda putar</b>
 
-6️⃣ <b>{title6[:20]}</b>
+⓺ <b>{title6[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+└ ⚡ **Didukung:** [{BOT_NAME}]
 
-7️⃣ <b>{title7[:20]}</b>
+⓻ <b>{title7[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+└ ⚡ **Didukung:** [{BOT_NAME}]
 
-8️⃣ <b>{title8[:20]}</b>
+⓼ <b>{title8[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+└ ⚡ **Didukung:** [{BOT_NAME}]
 
-9️⃣ <b>{title9[:20]}</b>
+⓽ <b>{title9[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
-
-🔟 <b>{title10[:20]}</b>
+└ ⚡ **Didukung:** [{BOT_NAME}]
+⓾ <b>{title10[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+└ ⚡ **Didukung:** [{BOT_NAME}]
 """,
             reply_markup=InlineKeyboardMarkup(buttons),disable_web_page_preview=True
         )
@@ -766,25 +765,25 @@ async def popat(_, CallbackQuery):
             f"""
 <b>✨ Silahkan pilih lagu yang ingin anda putar</b>
 
-1️⃣ <b>{title1[:20]}</b>
+⓵ <b>{title1[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+└ ⚡ **Didukung:** [{BOT_NAME}]
 
-2️⃣ <b>{title2[:20]}</b>
+⓶ <b>{title2[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+└ ⚡ **Didukung:** [{BOT_NAME}]
 
-3️⃣ <b>{title3[:20]}</b>
+⓷ <b>{title3[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+└ ⚡ **Didukung:** [{BOT_NAME}]
 
-4️⃣ <b>{title4[:20]}</b>
+⓸ <b>{title4[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+└ ⚡ **Didukung:** [{BOT_NAME}]
 
-5️⃣ <b>{title5[:20]}</b>
+⓹ <b>{title5[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
+└ ⚡ **Didukung:** [{BOT_NAME}]
 """,
             reply_markup=InlineKeyboardMarkup(buttons),disable_web_page_preview=True
         )
