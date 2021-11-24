@@ -134,14 +134,6 @@ Unban terlebih dahulu untuk menggunakan
                     f"{ASSNAME} Berhasil Bergabung",
                 )
                 await remove_active_chat(chat_id)
-            except Exception as e:
-                await message.reply_text(
-                    f"""
-**Asisten Gagal Bergabung**
-
-**Alasan**:{e}
-"""
-                )
                 return
         else:
             try:
