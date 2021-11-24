@@ -134,7 +134,6 @@ Unban terlebih dahulu untuk menggunakan
                     f"{ASSNAME} Berhasil Bergabung",
                 )
                 await remove_active_chat(chat_id)
-                return
         else:
             try:
                 xxy = await app.export_chat_invite_link(message.chat.id)
@@ -146,14 +145,6 @@ Unban terlebih dahulu untuk menggunakan
                 await remove_active_chat(chat_id)
             except UserAlreadyParticipant:
                 pass
-            except Exception as e:
-                return await message.reply_text(
-                    f"""
-**Asisten Gagal Bergabung**
-
-**Alasan**:{e}
-"""
-                )
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
