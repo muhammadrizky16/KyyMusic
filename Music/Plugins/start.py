@@ -89,8 +89,6 @@ async def welcome(_, message: Message):
 )
 async def start(_, message: Message):
     chat_id = message.chat.id
-    if not await is_served_chat(chat_id):
-        await message.reply_text(
     out = start_pannel()
     await message.reply_text(
         f"""
