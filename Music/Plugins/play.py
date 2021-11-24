@@ -14,6 +14,7 @@ from Music import (
     BOT_USERNAME,
     app,
 )
+
 from Music.config import DURATION_LIMIT
 from Music.MusicUtilities.database.chats import is_served_chat
 from Music.MusicUtilities.database.onoff import is_on_off
@@ -23,6 +24,7 @@ from Music.MusicUtilities.database.queue import (
     music_on,
     remove_active_chat,
 )
+
 from Music.MusicUtilities.helpers.chattitle import CHAT_TITLE
 from Music.MusicUtilities.helpers.filters import command
 from Music.MusicUtilities.helpers.gets import get_url, themes
@@ -32,6 +34,16 @@ from Music.MusicUtilities.helpers.inline import (
     search_markup,
     search_markup2,
 )
+
+from Music.MusicUtilities.helpers.inline import (
+    play_keyboard, 
+    search_markup, 
+    play_markup, 
+    playlist_markup, 
+    audio_markup, 
+    play_list_keyboard,
+)
+
 from Music.MusicUtilities.helpers.logger import LOG_CHAT
 from Music.MusicUtilities.helpers.thumbnails import gen_thumb
 from Music.MusicUtilities.helpers.ytdl import ytdl_opts
