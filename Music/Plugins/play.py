@@ -134,6 +134,14 @@ Unban terlebih dahulu untuk menggunakan
                     f"{ASSNAME} Berhasil Bergabung",
                 )
                 await remove_active_chat(chat_id)
+            except Exception as e:
+                await message.reply_text(
+                    f"""
+**Asisten Gagal Bergabung**
+**Alasan**:{e}
+"""
+                )
+                return
         else:
             try:
                 xxy = await app.export_chat_invite_link(message.chat.id)
@@ -145,6 +153,13 @@ Unban terlebih dahulu untuk menggunakan
                 await remove_active_chat(chat_id)
             except UserAlreadyParticipant:
                 pass
+            except Exception as e:
+                return await message.reply_text(
+                    f"""
+**Asisten Gagal Bergabung**
+**Alasan**:{e}
+"""
+                )
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
@@ -381,6 +396,7 @@ Unban terlebih dahulu untuk menggunakan
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
+        disable_web_page_preview=True
         return
     if await is_active_chat(chat_id):
         position = await put(chat_id, file=file)
@@ -737,8 +753,9 @@ async def popat(_, CallbackQuery):
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})
 └ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
-            reply_markup=InlineKeyboardMarkup(buttons),disable_web_page_preview=True
+            reply_markup=InlineKeyboardMarkup(buttons),
         )
+        disable_web_page_preview=True
         return
     if i == 2:
         buttons = search_markup(
@@ -779,8 +796,9 @@ async def popat(_, CallbackQuery):
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})
 └ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
-            reply_markup=InlineKeyboardMarkup(buttons),disable_web_page_preview=True
+            reply_markup=InlineKeyboardMarkup(buttons),
         )
+        disable_web_page_preview=True
         return
 
 
