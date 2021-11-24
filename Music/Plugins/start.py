@@ -91,14 +91,6 @@ async def start(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
         await message.reply_text(
-            f"""
-**Grup ini belum dapat ijin.**
-
-Untuk mendapatkan ijin menggunakan bot.
-Silahkan Pm Daftar Admin Saya [Dari Sini](https://t.me/{BOT_USERNAME}?start=sudolist)
-"""
-        )
-        return await app.leave_chat(chat_id)
     out = start_pannel()
     await message.reply_text(
         f"""
