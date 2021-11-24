@@ -376,23 +376,23 @@ Unban terlebih dahulu untuk menggunakan
             f"""
 **✨ Silahkan pilih lagu yang ingin anda putar**
 
-1️⃣ <b>{title1[:20]}</b>
+¹ <b>{title1[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})
 └ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
-2️⃣ <b>{title2[:20]}</b>
+² <b>{title2[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})
 └ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
-3️⃣ <b>{title3[:20]}</b>
+⁴ <b>{title3[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})
 └ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
-4️⃣ <b>{title4[:20]}</b>
+⁴ <b>{title4[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})
 └ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
-5️⃣ <b>{title5[:20]}</b>
+⁵ <b>{title5[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})
 └ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
