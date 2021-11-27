@@ -1,10 +1,12 @@
+from Music import UPDATES_CHANNEL
+
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 def play_markup(videoid, user_id):
     buttons = [
         [
-            InlineKeyboardButton(text="✨ ᴄʜᴀɴɴᴇʟ​", url="https://t.me/ahhsudahlahhh"),
+            InlineKeyboardButton(text="✨ ᴄʜᴀɴɴᴇʟ​", url="https://t.me/{UPDATES_CHANNEL}"),
             InlineKeyboardButton(
                 text="ᴍᴇɴᴜ ⚙", callback_data=f"other {videoid}|{user_id}"
             ),
