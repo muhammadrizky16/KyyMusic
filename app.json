@@ -44,11 +44,6 @@
             "required": true,
             "value": "3600"
         },
-        "UPDATES_CHANNEL": {
-            "description": "if you have channel, then fill the channel username here without @",
-            "required": true,
-            "value": "ahhsudahlahhh"
-        },
         "BOT_TOKEN": {
             "description": "fill with your bot token get from @BotFather on telegram",
             "required": true,
