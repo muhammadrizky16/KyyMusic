@@ -6,7 +6,6 @@ from Music import (
     BOT_USERNAME,
     OWNER,
     SUDOERS,
-    UPDATES_CHANNEL,
     app,
 )
 from Music.MusicUtilities.database.chats import is_served_chat
@@ -27,7 +26,7 @@ def start_pannel():
     buttons = [
         [
             InlineKeyboardButton("📚 ᴄᴏᴍᴍᴀɴᴅ​", url="https://telegra.ph/ᴷʸʸ-11-22"),
-            InlineKeyboardButton("✨ ᴜᴘᴅᴀᴛᴇs ✨", url=f"https://t.me/{UPDATES_CHANNEL}"),
+            InlineKeyboardButton("✨ ᴜᴘᴅᴀᴛᴇs ✨", url=f"https://t.me/ahhsudahlahhh"),
         ],
     ]
     return (
@@ -44,7 +43,7 @@ pstart_markup = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton("📚 ᴄᴏᴍᴍᴀɴᴅ​", url="https://telegra.ph/ᴷʸʸ-11-22"),
-            InlineKeyboardButton("✨ ᴜᴘᴅᴀᴛᴇs ✨", url=f"https://t.me/{UPDATES_CHANNEL}"),
+            InlineKeyboardButton("✨ ᴜᴘᴅᴀᴛᴇs ✨", url=f"https://t.me/ahhsudahlahhh"),
         ],
     ]
 )
