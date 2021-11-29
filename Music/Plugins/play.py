@@ -144,12 +144,12 @@ Unban terlebih dahulu untuk menggunakan
                 return
         else:
             try:
-                xxy = await app.export_chat_invite_link(message.chat.id)
-                yxy = await app.revoke_chat_invite_link(message.chat.id, xxy)
-                await ASS_ACC.join_chat(yxy.invite_link)
-                await message.reply(
-                    f"{ASSNAME} Berhasil Bergabung",
-                )
+                invite_link = await message.chat.export_invite_link()
+                if "+" in invite_link:
+                    kontol = (invite_link.replace("+", "")).split("t.me/")[1]
+                    link_bokep = f"https://t.me/joinchat/{kontol}"
+                await ASS_ACC.join_chat(link_bokep)
+                await message.reply(f"{ASSNAME} Berhasil Bergabung",)
                 await remove_active_chat(chat_id)
             except UserAlreadyParticipant:
                 pass
