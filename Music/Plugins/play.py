@@ -808,7 +808,7 @@ async def popat(_, CallbackQuery):
 
 @app.on_message(filters.command("playplaylist"))
 async def play_playlist_cmd(_, message):
-    thumb ="cache/photo_2021-11-20_01-01-55.jpg"
+    thumb ="cache/2b610c918dec590d2777b.jpg"
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     buttons = playlist_markup(user_name, user_id)
