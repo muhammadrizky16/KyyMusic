@@ -208,10 +208,10 @@ play_list_keyboard = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Users Playlist", callback_data="P_list"
+                        "ᴜsᴇʀ ᴘʟᴀʏʟɪsᴛ​", callback_data="P_list"
                     ),
                     InlineKeyboardButton(
-                        "Groups Playlist", callback_data="G_list"
+                        "ɢʀᴏᴜᴘ ᴘʟᴀʏʟɪsᴛ​​", callback_data="G_list"
                     )
                 ],
                 [
