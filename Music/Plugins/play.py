@@ -31,8 +31,12 @@ from Music.MusicUtilities.helpers.gets import get_url, themes
 from Music.MusicUtilities.helpers.inline import (
     audio_markup,
     play_markup,
+    play_keyboard,
     search_markup,
     search_markup2,
+    playlist_markup,
+    play_list_keyboard,
+
 )
 
 from Music.MusicUtilities.helpers.logger import LOG_CHAT
@@ -802,15 +806,15 @@ async def popat(_, CallbackQuery):
         return
 
 
-@app.on_message(filters.command("playlist"))
+@app.on_message(filters.command("playplaylist"))
 async def play_playlist_cmd(_, message):
-    thumb ="cache/playlistthumb.jpg"
+    thumb ="cache/photo_2021-11-20_01-01-55.jpg"
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     buttons = playlist_markup(user_name, user_id)
     await message.reply_photo(
-    photo=thumb,
-    caption=("**__Music's Playlist Feature__**\n\nSelect the Playlist you want to play!."),
+    photo=thumb, 
+    caption=("**__Music's Playlist Feature__**\n\nSelect the Playlist you want to play!."),    
     reply_markup=InlineKeyboardMarkup(buttons),
     )
     return
