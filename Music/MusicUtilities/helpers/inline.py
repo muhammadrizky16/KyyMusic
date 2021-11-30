@@ -1,5 +1,10 @@
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
+from pyrogram.types import (
+    CallbackQuery,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    InputMediaPhoto,
+    Message,
+)
 
 def play_markup(videoid, user_id):
     buttons = [
@@ -23,6 +28,10 @@ def others_markup(videoid, user_id):
             InlineKeyboardButton(text="II", callback_data=f"pausevc2"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"skipvc2"),
             InlineKeyboardButton(text="▢", callback_data=f"stopvc2"),
+        ],
+        [
+                InlineKeyboardButton(text="Add Your List", callback_data=f'playlist {videoid}|{user_id}'),
+                InlineKeyboardButton(text="Add Group List", callback_data=f'group_playlist {videoid}|{user_id}')
         ],
         [
             InlineKeyboardButton(
@@ -194,3 +203,33 @@ confirm_group_keyboard = InlineKeyboardMarkup(
 close_keyboard = InlineKeyboardMarkup(
     [[InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="close2")]]
 )
+
+play_list_keyboard = InlineKeyboardMarkup( 
+            [
+                [
+                    InlineKeyboardButton(
+                        "Users Playlist", callback_data="P_list"
+                    ),
+                    InlineKeyboardButton(
+                        "Groups Playlist", callback_data="G_list"
+                    )
+                ],
+                [
+                    InlineKeyboardButton(
+                        "ᴛᴜᴛᴜᴘ​", callback_data="close2"
+                    )
+                ]
+            ]
+        )
+
+def playlist_markup(user_name, user_id):
+    buttons= [
+            [
+                InlineKeyboardButton(text=f"Groups", callback_data=f'play_playlist {user_id}|group'),
+                InlineKeyboardButton(text=f"{user_name[:8]}", callback_data=f'play_playlist {user_id}|personal'),
+            ],
+            [
+                InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ​", callback_data="close2")              
+            ],
+        ]
+    return buttons
