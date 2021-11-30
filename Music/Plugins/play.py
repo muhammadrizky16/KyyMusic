@@ -1,54 +1,125 @@
-import asyncio
 import os
-import random
-import shutil
+import time
 from os import path
-
+import random
+import asyncio
+import shutil
+from pytube import YouTube
+from yt_dlp import YoutubeDL
+from Music import converter
 import yt_dlp
+import shutil
+import psutil
+from pyrogram import Client
+from pyrogram.types import Message, Voice
+from pytgcalls import StreamType
+from pytgcalls.types.input_stream import InputAudioStream, InputStream
+from sys import version as pyver
 from Music import (
+    dbb,
+    app,
+    BOT_USERNAME,
+    BOT_ID,
+    BOT_NAME,
     ASSID,
     ASSNAME,
     ASSUSERNAME,
-    BOT_ID,
-    BOT_NAME,
-    BOT_USERNAME,
-    app,
+    ASSMENTION,
 )
-
-from Music.config import DURATION_LIMIT
-from Music.MusicUtilities.database.chats import is_served_chat
-from Music.MusicUtilities.database.onoff import is_on_off
+from Music.MusicUtilities.tgcallsrun import (
+    music,
+    convert,
+    download,
+    clear,
+    get,
+    is_empty,
+    put,
+    task_done,
+    ASS_ACC,
+)
 from Music.MusicUtilities.database.queue import (
-    add_active_chat,
+    get_active_chats,
     is_active_chat,
-    music_on,
+    add_active_chat,
     remove_active_chat,
+    music_on,
+    is_music_playing,
+    music_off,
 )
-
-from Music.MusicUtilities.helpers.chattitle import CHAT_TITLE
-from Music.MusicUtilities.helpers.filters import command
-from Music.MusicUtilities.helpers.gets import get_url, themes
+from Music.MusicUtilities.database.onoff import (
+    is_on_off,
+    add_on,
+    add_off,
+)
+from Music.MusicUtilities.database.chats import (
+    get_served_chats,
+    is_served_chat,
+    add_served_chat,
+    get_served_chats,
+)
 from Music.MusicUtilities.helpers.inline import (
-    audio_markup,
-    play_markup,
     play_keyboard,
     search_markup,
-    search_markup2,
+    play_markup,
     playlist_markup,
+    audio_markup,
     play_list_keyboard,
-
 )
-
+from Music.MusicUtilities.database.blacklistchat import (
+    blacklisted_chats,
+    blacklist_chat,
+    whitelist_chat,
+)
+from Music.MusicUtilities.database.gbanned import (
+    get_gbans_count,
+    is_gbanned_user,
+    add_gban_user,
+    add_gban_user,
+)
+from Music.MusicUtilities.database.theme import (
+    _get_theme,
+    get_theme,
+    save_theme,
+)
+from Music.MusicUtilities.database.assistant import (
+    _get_assistant,
+    get_assistant,
+    save_assistant,
+)
+from Music.config import DURATION_LIMIT
+from Music.MusicUtilities.helpers.decorators import errors
+from Music.MusicUtilities.helpers.filters import command
+from Music.MusicUtilities.helpers.gets import (
+    get_url,
+    themes,
+    random_assistant,
+    ass_det,
+)
 from Music.MusicUtilities.helpers.logger import LOG_CHAT
 from Music.MusicUtilities.helpers.thumbnails import gen_thumb
-from Music.MusicUtilities.helpers.ytdl import ytdl_opts
-from Music.MusicUtilities.tgcallsrun import ASS_ACC, convert, download, music, put
-from pyrogram import Client, filters
-from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
-from pyrogram.types import InlineKeyboardMarkup, Message, Voice
-from pytgcalls import StreamType
-from pytgcalls.types.input_stream import InputAudioStream, InputStream
+from Music.MusicUtilities.helpers.chattitle import CHAT_TITLE
+from Music.MusicUtilities.helpers.ytdl import ytdl_opts 
+from Music.MusicUtilities.helpers.inline import (
+    play_keyboard,
+    search_markup2,
+    search_markup,
+)
+from pyrogram import filters
+from typing import Union
+import subprocess
+from asyncio import QueueEmpty
+import shutil
+import os
 from youtubesearchpython import VideosSearch
+from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
+from pyrogram.types import Message, Audio, Voice
+from pyrogram.types import (
+    CallbackQuery,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    InputMediaPhoto,
+    Message,
+)
 
 flex = {}
 chat_watcher_group = 3
