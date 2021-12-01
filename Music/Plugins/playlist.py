@@ -105,7 +105,7 @@ options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", 
 
 @app.on_message(filters.command("playlist"))
 async def pause_cmd(_, message):
-    thumb ="cache/2b610c918dec590d2777b.jpg"
+    thumb ="cache/IMG_20211129_031406_576.jpg"
     await message.reply_photo(
     photo=thumb, 
     caption=("**__Music's Playlist Feature__**\n\nSelect The Playlist, You want to check!"),    
