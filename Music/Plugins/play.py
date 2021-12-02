@@ -190,7 +190,7 @@ async def play(_, message: Message):
                         [
                             InlineKeyboardButton(
                                 "sᴜᴘᴘᴏʀᴛ​",
-                                url=f"https://t.me/NastySupport",
+                                url=f"https://t.me/NastySupportt",
                             )
                         ]
                     ]
