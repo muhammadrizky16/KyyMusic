@@ -130,75 +130,9 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-BANNED_USERS = set(int(x) for x in os.getenv("BANNED_USERS", "").split())
-UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "ahhsudahlahhh")
-
-
 @Client.on_message(command(["play", f"play@{BOT_USERNAME}", "p"]))
 async def play(_, message: Message):
     chat_id = message.chat.id
-    user_id = message.from_user.id
-    user_name = message.from_user.first_name
-    rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
-    if chat_id in BANNED_USERS:
-        await app.send_message(
-            chat_id,
-            text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [sᴜᴘᴘᴏʀᴛ​](https://t.me/NastySupportt)**",
-            reply_to_message_id=message.message_id,
-        )
-        return
-    ## Doing Force Sub 🤣
-    update_channel = UPDATES_CHANNEL
-    if update_channel:
-        try:
-            user = await app.get_chat_member(update_channel, user_id)
-            if user.status == "kicked":
-                await app.send_message(
-                    chat_id,
-                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [sᴜᴘᴘᴏʀᴛ​](https://t.me/NastySupportt)**",
-                    parse_mode="markdown",
-                    disable_web_page_preview=True,
-                )
-                return
-        except UserNotParticipant:
-            await app.send_message(
-                chat_id,
-                text=f"**Halo {rpk} Untuk menghindari penggunaan yang berlebihan bot ini di khususkan untuk yang sudah join di group kami!**",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                "sᴜᴘᴘᴏʀᴛ​",
-                                url=f"https://t.me/NastySupportt"
-                            ),
-                            InlineKeyboardButton(
-                                "ᴄʜᴀɴɴᴇʟ​​",
-                                url=f"https://t.me/ahhsudahlahhh",
-                            )
-                        ]
-                    ]
-                ),
-                parse_mode="markdown",
-            )
-            return
-        except Exception:
-            await app.send_message(
-                chat_id,
-                text=f"**{rpk} Anda tidak diizinkan\nUntuk menggunakan bot ini anda harus join Group Support Biar bisa di play.**",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                "sᴜᴘᴘᴏʀᴛ​",
-                                url=f"https://t.me/NastySupportt",
-                            )
-                        ]
-                    ]
-                ),
-                parse_mode="markdown",
-                disable_web_page_preview=True,
-            )
-            return
     if message.sender_chat:
         return await message.reply_text(
             """
