@@ -132,13 +132,6 @@ def time_to_seconds(time):
 
 
 @Client.on_message(command(["play", f"play@{BOT_USERNAME}", "p"]))
-def force_subs(func: Callable) ➝ Callablle:
-    async def wrapper(client: client, message)
-        chat = await client.get_chat_member("-1001380293847", message.from_user.id)
-        if chat.status in ["left", kicked"]:
-            return await message.reply("**Anda tidak izinkan, Untuk Menggunakan bot harus join Group Support di [sᴜᴘᴘᴏʀᴛ​](https://t.me/NastySupportt)**")
-        return await func(client, message)
-    return wrapper
 async def play(_, message: Message):
     chat_id = message.chat.id
     if message.sender_chat:
