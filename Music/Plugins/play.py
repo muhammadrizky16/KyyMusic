@@ -131,7 +131,7 @@ def time_to_seconds(time):
 
 
 BANNED_USERS = set(int(x) for x in os.getenv("BANNED_USERS", "").split())
-UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "GroupMusicRandom")
+UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "ahhsudahlahhh")
 
 
 @Client.on_message(command(["play", f"play@{BOT_USERNAME}", "p"]))
@@ -143,7 +143,7 @@ async def play(_, message: Message):
     if chat_id in BANNED_USERS:
         await app.send_message(
             chat_id,
-            text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Group](https://t.me/{UPDATES_CHANNEL})**",
+            text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Support](https://t.me/NastySupportt)**",
             reply_to_message_id=message.message_id,
         )
         return
@@ -155,7 +155,7 @@ async def play(_, message: Message):
             if user.status == "kicked":
                 await app.send_message(
                     chat_id,
-                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Group](https://t.me/{UPDATES_CHANNEL})**",
+                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Support](https://t.me/NastySupportt)**",
                     parse_mode="markdown",
                     disable_web_page_preview=True,
                 )
@@ -169,8 +169,11 @@ async def play(_, message: Message):
                         [
                             InlineKeyboardButton(
                                 "Join Group Support",
-                                url=f"https://t.me/{update_channel}",
+                                url=f"https://t.me/NastySupportt",
                             )
+                            InlineKeyboardButton(
+                                "Join Channel",
+                                url=f"https://t.me/ahhsudahlahhh",
                         ]
                     ]
                 ),
@@ -180,7 +183,7 @@ async def play(_, message: Message):
         except Exception:
             await app.send_message(
                 chat_id,
-                text=f"**{rpk} Sepertinya ada yang salah ngab 🤪. Silahkan hubungi [Support Group](https://t.me/{UPDATES_CHANNEL}).**",
+                text=f"**{rpk} Sepertinya ada yang salah ngab 🤪. Silahkan hubungi [Support Group](https://t.me/NastySupport).**",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
             )
