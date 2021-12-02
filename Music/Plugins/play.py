@@ -184,7 +184,7 @@ async def play(_, message: Message):
         except Exception:
             await app.send_message(
                 chat_id,
-                text=f"**{rpk} Sepertinya ada yang salah ngab 🤪. Silahkan hubungi [Support Group](https://t.me/NastySupport).**",
+                text=f"**{rpk} Anda tidak diizinkan\nUntuk menggunakan bot ini anda harus join di [sᴜᴘᴘᴏʀᴛ​](https://t.me/NastySupportt) Biar bisa di play.**",
                 parse_mode="markdown",
                 disable_web_page_preview=True,
             )
