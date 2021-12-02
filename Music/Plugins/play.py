@@ -184,7 +184,17 @@ async def play(_, message: Message):
         except Exception:
             await app.send_message(
                 chat_id,
-                text=f"**{rpk} Anda tidak diizinkan\nUntuk menggunakan bot ini anda harus join di [sᴜᴘᴘᴏʀᴛ​](https://t.me/NastySupportt) Biar bisa di play.**",
+                text=f"**{rpk} Anda tidak diizinkan\nUntuk menggunakan bot ini anda harus join Group Support Biar bisa di play.**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                "sᴜᴘᴘᴏʀᴛ​",
+                                url=f"https://t.me/NastySupport",
+                            )
+                        ]
+                    ]
+                ),
                 parse_mode="markdown",
                 disable_web_page_preview=True,
             )
