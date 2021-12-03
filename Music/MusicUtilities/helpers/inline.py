@@ -223,7 +223,9 @@ play_list_keyboard = InlineKeyboardMarkup(
 def playlist_markup(user_name, user_id):
     buttons= [
             [
-                InlineKeyboardButton(text=f"Groups", callback_data=f'play_playlist {user_id}|group'),
+                InlineKeyboardButton(text=f"ɢʀᴏᴜᴘs", callback_data=f'play_playlist {user_id}|group'),
+            ],
+            [
                 InlineKeyboardButton(text=f"{user_name[:8]}", callback_data=f'play_playlist {user_id}|personal'),
             ],
             [
