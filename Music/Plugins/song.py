@@ -455,12 +455,12 @@ def gets(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="📥 Audio", callback_data=f"gets audio|{videoid}|{user_id}"
+                text="ᴀᴜᴅɪᴏ", callback_data=f"gets audio|{videoid}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="Video 📥", callback_data=f"gets video|{videoid}|{user_id}"
+                text="ᴠɪᴅᴇᴏ", callback_data=f"gets video|{videoid}|{user_id}"
             ),
         ],
-        [InlineKeyboardButton(text="🗑️ Tutup 🗑️", callback_data=f"close2")],
+        [InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data=f"close2")],
     ]
     return buttons
