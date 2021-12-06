@@ -144,7 +144,7 @@ async def play(_, message: Message):
     if chat_id in BANNED_USERS:
         await app.send_message(
             chat_id,
-            text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Group](https://t.me/{UPDATES_CHANNEL})**",
+            text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [ɢʀᴏᴜᴘs](https://t.me/NastySupportt)**",
             reply_to_message_id=message.message_id,
         )
         return
@@ -156,7 +156,7 @@ async def play(_, message: Message):
             if user.status == "kicked":
                 await app.send_message(
                     chat_id,
-                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Group](https://t.me/{UPDATES_CHANNEL})**",
+                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [ɢʀᴏᴜᴘs](https://t.me/NastySupportt)**",
                     parse_mode="markdown",
                     disable_web_page_preview=True,
                 )
@@ -171,8 +171,8 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                "Join Group Support",
-                                url=f"https://t.me/{update_channel}",
+                                "sᴜᴘᴘᴏʀᴛ",
+                                url=f"https://t.me/NastySupportt",
                             )
                         ]
                     ]
