@@ -13,7 +13,7 @@ from pyrogram import filters
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import Message, ReplyKeyboardMarkup
 
-from Music import SUDOERS, userbot
+from Music import SUDOERS, app
 from Music.MusicUtilities.helpers.tasks import add_task, rm_task
 
 # Eval and Sh module from WBB
@@ -81,7 +81,7 @@ async def iter_edit(message: Message, text: str):
                 return
 
 
-@userbot.on_message(
+@app.on_message(
     filters.user(SUDOERS)
     & ~filters.forwarded
     & ~filters.via_bot
@@ -177,7 +177,7 @@ async def executor(client, message: Message):
     await eor(status, text=final_output, quote=True)
 
 
-@userbot.on_message(
+@app.on_message(
     filters.user(SUDOERS)
     & ~filters.forwarded
     & ~filters.via_bot
