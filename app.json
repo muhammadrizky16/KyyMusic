@@ -44,16 +44,6 @@
             "required": true,
             "value": "3600"
         },
-        "UPDATES_CHANNEL": {
-            "description": "Support Channel Link if you have any, Leave blank if no support.",
-            "value": "",
-           "required": false
-        },
-        "SUPPORT_GROUP": {
-            "description": "Support Group Link if you have any, Leave blank if no support",
-            "value": "",
-            "required": false
-        },
         "BOT_TOKEN": {
             "description": "fill with your bot token get from @BotFather on telegram",
             "required": true,
