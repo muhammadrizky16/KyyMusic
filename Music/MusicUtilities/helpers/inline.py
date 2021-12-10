@@ -1,8 +1,3 @@
-from Music import (
-    UPDATES_CHANNEL,
-    SUPPORT_GROUP,
-)
-
 from pyrogram.types import (
     CallbackQuery,
     InlineKeyboardButton,
