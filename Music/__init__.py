@@ -51,8 +51,8 @@ loop = asyncio.get_event_loop()
 BOT_ID = 0
 BOT_NAME = ""
 BOT_USERNAME = ""
-UPDATES_CHANNEL
-SUPPORT_GROUP
+UPDATES_CHANNEL = ""
+SUPPORT_GROUP = ""
 ASSID = 0
 ASSNAME = ""
 ASSUSERNAME = ""
