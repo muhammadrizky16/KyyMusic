@@ -5,12 +5,13 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message,
 )
+from Music.config import GROUP, CHANNEL
 
 def play_markup(videoid, user_id):
     buttons = [
         [
-            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ​​", url="https://t.me/NastySupportt"),
-            InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ​", url="https://t.me/ahhsudahlahhh"),
+            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ​​", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ​", url=f"https://t.me/{CHANNEL}"),
         ],
         [      
                 InlineKeyboardButton(text="ᴍᴇɴᴜ", callback_data=f"other {videoid}|{user_id}")
