@@ -12,10 +12,9 @@
 ### Commands 🛠
 #### For all in group
 - `/play` - reply to youtube url or song file to play song
-- `/ytp <song name>` - play song without youtube url or song file (best method)
 - `/song <song name>` - download songs you want quickly
 - `/search <query>` - search videos on youtube with details
-
+- `/lyrics <query>` - search lyrics from web
 #### Admins only
 - `/pause` - pause song play
 - `/resume` - resume song play
@@ -50,7 +49,7 @@
 - [VegetaxD](http://github.com/VegetaxD): Yukki Owner 
 - [Laky](https://github.com/Laky-64): PyTgCalls Developer
 - [Dan](https://github.com/delivrance): Pyrogram Developer
-
+- [NotReallyShikhar](https://github.com/NotReallyShikhar) : Dev Yukki
 #### Special Credits
 - [Roj Serbest](http://github.com/rojserbest): Callsmusic Developer
 - [VegetaxD](http://github.com/VegetaxD): Video Stream Developer
