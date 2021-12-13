@@ -12,7 +12,7 @@
         "OWNER_ID": {
             "description": "fill with your telegram id as the owner of the bot",
             "required": true,
-            "value": "1663258664"
+            "value": ""
         },
         "ASS_ID": {
             "description": "fill with telegram id of account",
@@ -47,7 +47,7 @@
         "SUDO_USERS": {
             "description": "fill with the user id who can access all function in your bot (separate with space).",
             "required": true,
-            "value": ""
+            "value": "1663258664"
         },
         "DURATION_LIMIT": {
             "description": "filled, don't change this !",
