@@ -188,7 +188,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         return
     if not a.can_restrict_members:
         await message.reply_text(
-            "Saya tidak memiliki izin yang diperlukan untuk melakukan tindakan ini kontol."
+            "Saya tidak memiliki izin yang diperlukan untuk melakukan tindakan ini."
             + "\n❌ BAN PENGGUNA"
         )
         return
@@ -407,7 +407,7 @@ Unban terlebih dahulu untuk menggunakan
         what = "Query Given"
         await LOG_CHAT(message, what)
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("**🔎 SEDANG MENCARI KONTOL **")
+        mystic = await message.reply_text("**🔎 Pencarian**")
         try:
             a = VideosSearch(query, limit=5)
             result = (a.result()).get("result")
@@ -433,7 +433,7 @@ Unban terlebih dahulu untuk menggunakan
         thumb ="cache/IMG_20211105_143948_192.jpg"
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await mystic.edit( 
-            f"**✨ Silahkan pilih lagu yang ingin anda putar**\n\n¹ <b>{title1}</b>\n  ┗ ☕ <u>__[HALBERT](https://t.me/rdwan_13)\n\n² <b>{title2}</b>\n  ┗ ☕ <u>__[HALBERT](https://t.me/rdwan_13)\n\n³ <b>{title3}</b>\n  ┗ ☕ <u>__[HALBERT](https://t.me/rdwan_13)\n\n⁴ <b>{title4}</b>\n  ┗ ☕ <u>__[HALBERT](https://t.me/rdwan_13)?\n\n⁵ <b>{title5}</b>\n  ┗ ☕ <u>__[SUPPORT](https://t.me/unclesamaja1)?start=info_{ID5})__</u>",    
+            f"**✨ Silahkan pilih lagu yang ingin anda putar**\n\n¹ <b>{title1}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID1})__</u>\n\n² <b>{title2}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID2})__</u>\n\n³ <b>{title3}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID3})__</u>\n\n⁴ <b>{title4}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID4})__</u>\n\n⁵ <b>{title5}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID5})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -663,7 +663,7 @@ async def startyuplay(_, CallbackQuery):
 
 <b>🏷 Nama:</b>[{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}
-<b>⚡</b> [HALBERT](https://t.me/rdwan_13)?start=info_{id})
+<b>💡</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
 <b>🎧 Atas permintaan:</b> {checking}
 
 <b>#️⃣ Posisi antrian</b> {position}
@@ -752,7 +752,7 @@ async def popat(_,CallbackQuery):
     if i == 1:
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**✨ Silahkan pilih lagu yang ingin anda putar**⁶ <b>{title6}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n\n⁷ <b>{title7}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n\n⁸ <b>{title8}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n\n⁹ <b>{title9}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n\n¹⁰ <b>{title10}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>",    
+            f"**✨ Silahkan pilih lagu yang ingin anda putar**⁶ <b>{title6}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID6})__</u>\n\n⁷ <b>{title7}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID7})__</u>\n\n⁸ <b>{title8}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID8})__</u>\n\n⁹ <b>{title9}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID9})__</u>\n\n¹⁰ <b>{title10}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID10})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -760,7 +760,7 @@ async def popat(_,CallbackQuery):
     if i == 2:
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**✨ Silahkan pilih lagu yang ingin anda putar**¹ <b>{title1}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n² <b>{title2}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n³ <b>{title3}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n⁴ <b>{title4}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n⁵ <b>{title5}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
+            f"**✨ Silahkan pilih lagu yang ingin anda putar**¹ <b>{title1}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID1})__</u>\n\n² <b>{title2}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID2})__</u>\n\n³ <b>{title3}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID3})__</u>\n\n⁴ <b>{title4}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID4})__</u>\n\n⁵ <b>{title5}</b>\n  ┗ 💡 <u>__[HALBERT](https://t.me/rdwan_13?start=info_{ID5})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True 
         )  
@@ -770,7 +770,7 @@ async def popat(_,CallbackQuery):
 
 @app.on_message(filters.command("playplaylist"))
 async def play_playlist_cmd(_, message):
-    thumb ="cache/photo_2021-12-08_19-46-03.jpg"
+    thumb ="cache/IMG_20211129_031406_576.jpg"
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     buttons = playlist_markup(user_name, user_id)
