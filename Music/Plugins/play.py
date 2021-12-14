@@ -407,7 +407,7 @@ Unban terlebih dahulu untuk menggunakan
         what = "Query Given"
         await LOG_CHAT(message, what)
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("**🔎 Pencarian**")
+        mystic = await message.reply_text("**🔎 SEDANG MENCARI KONTOL **")
         try:
             a = VideosSearch(query, limit=5)
             result = (a.result()).get("result")
@@ -663,7 +663,7 @@ async def startyuplay(_, CallbackQuery):
 
 <b>🏷 Nama:</b>[{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}
-<b>💡</b> [More Information](https://t.me/{BOT_USERNAME}?start=info_{id})
+<b>⚡</b> [HALBERT](https://t.me/rdwan_13)?start=info_{id})
 <b>🎧 Atas permintaan:</b> {checking}
 
 <b>#️⃣ Posisi antrian</b> {position}
