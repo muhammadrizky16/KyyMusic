@@ -11,10 +11,10 @@ def play_markup(videoid, user_id):
     buttons = [
         [
             InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ​​", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ​", url=f"https://t.me/{CHANNEL}"),
+            InlineKeyboardButton(text="ᴍᴇɴᴜ", callback_data=f"other {videoid}|{user_id}")
         ],
         [      
-                InlineKeyboardButton(text="ᴍᴇɴᴜ", callback_data=f"other {videoid}|{user_id}")
+               InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f"close"),
         ],
     ]
     return buttons
@@ -174,7 +174,7 @@ start_keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "📚 ᴅᴀꜰᴛᴀʀ ᴘᴇʀɪɴᴛᴀʜ​ 📚", url="https://telegra.ph/ҡʏʏᵠˣʸᵒ-12-04"
+                "📚 ᴅᴀꜰᴛᴀʀ ᴘᴇʀɪɴᴛᴀʜ​ 📚", url="https://telegra.ph/ҡʏʏ-ᴇx-12-15"
             )
         ],
         [InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="close2")],
