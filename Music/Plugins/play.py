@@ -280,7 +280,7 @@ Unban terlebih dahulu untuk menggunakan
             else file_name,
         )
         title = "Audio Yang Dipilih Dari Telegram"
-        link = "https://t.me/ahhsudahlahhh"
+        link = "https://t.me/NastyProject"
         thumb = "cache/Audio.png"
         videoid = "smex1"
     elif url:
@@ -395,14 +395,15 @@ Unban terlebih dahulu untuk menggunakan
         if len(message.command) < 2:
             what = "Command"
             await LOG_CHAT(message, what)
-            user_name = message.from_user.first_name
-            thumb ="cache/IMG_20211105_143948_192.jpg"
-            buttons = playlist_markup(user_name, user_id)
-            hmo = await message.reply_photo(
-            photo=thumb, 
-            caption=("**Usage:** /play [nama musik atau tautan youtube atau balas audio]\n\njika Anda ingin memutar daftar putar! Pilih yang dari bawah."),    
-            reply_markup=InlineKeyboardMarkup(buttons),
-            ) 
+            message.from_user.first_name
+            hmo = await message.reply_text(
+                """
+<b>❌ Lagu tidak ditemukan atau anda tidak menulis judul lagu dengan benar
+
+✅ Contoh Menggunakan Bot
+`/play halu`
+""",
+            )
             return
         what = "Query Given"
         await LOG_CHAT(message, what)
