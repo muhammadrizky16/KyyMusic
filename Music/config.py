@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 SESSION_NAME = getenv('SESSION_NAME', 'session')
+SESSION_NAME2 = getenv('SESSION_NAME2', 'session')
 BOT_TOKEN = getenv('BOT_TOKEN')
 API_ID = int(getenv('API_ID', "10892147"))
 API_HASH = getenv('API_HASH')
@@ -18,7 +19,7 @@ OWNER_ID = list(map(int, getenv('OWNER_ID', '').split()))
 GROUP = getenv("GROUP", None)
 CHANNEL = getenv("CHANNEL", None)
 ASS_ACC = Client(
-    SESSION_NAME,
+    SESSION_NAME2,
     API_ID,
     API_HASH,
 )
