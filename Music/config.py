@@ -18,7 +18,7 @@ OWNER_ID = list(map(int, getenv('OWNER_ID', '').split()))
 GROUP = getenv("GROUP", None)
 CHANNEL = getenv("CHANNEL", None)
 ASS_ACC = Client(
-    SESSION_NAME2,
+    SESSION_NAME,
     API_ID,
     API_HASH,
 )
