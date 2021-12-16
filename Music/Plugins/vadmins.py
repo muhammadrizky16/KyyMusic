@@ -7,7 +7,8 @@ from pyrogram.types import (
 )
 
 from Music import app
-from Music.config import call_py
+from Music.MusicUtilities.tgcallsrun.music import pytgcalls as call_py
+
 from Music.MusicUtilities.helpers.decorators import authorized_users_only
 from Music.MusicUtilities.helpers.filters import command
 from Music.MusicUtilities.tgcallsrun.queues import QUEUE, clear_queue
