@@ -42,7 +42,7 @@
          "CHANNEL": {
             "description": "Isi dengan username channel tanpa @",
             "required": true,
-            "value": "ahhsudahlahhh"
+            "value": "NastyProject"
         },
         "SUDO_USERS": {
             "description": "fill with the user id who can access all function in your bot (separate with space).",
