@@ -29,5 +29,5 @@ async def ping(_, message):
     end = datetime.now()
     resp = (end - start).microseconds / 1000
     await response.edit(
-        f"**Duar !!**\n`💫{resp} ms`\n\n<b><u>Statistik Sistem Musik:</u></b>{uptime}"
+        f"**Pong !!**\n`💫{resp} ms`\n\n<b><u>Statistik Sistem Musik:</u></b>{uptime}"
     )
