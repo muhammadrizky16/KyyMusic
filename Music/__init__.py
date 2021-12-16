@@ -1,24 +1,31 @@
 print("[INFO]: INITIALIZING")
-
-from pyrogram import Client
 import asyncio
-from Music.config import API_ID, API_HASH, BOT_TOKEN, MONGO_DB_URI, SUDO_USERS
-from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
-import time
-import uvloop
-from Music import config
 import importlib
-from pyrogram import Client as Bot
-from Music.config import API_ID, API_HASH, BOT_TOKEN, MONGO_DB_URI, SUDO_USERS, LOG_GROUP_ID, ASS_ACC, call_py, OWNER_ID
-from pyrogram import Client
+import time
+
+import uvloop
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
-import time
+from pyrogram import Client
+from pyrogram import Client as Bot
+
+from Music import config
+from Music.config import (
+    API_HASH,
+    API_ID,
+    BOT_TOKEN,
+    LOG_GROUP_ID,
+    MONGO_DB_URI,
+    OWNER_ID,
+    SUDO_USERS,
+)
+
 
 def initialize():
     global dbb
     dbb = {}
-    
+
+
 initialize()
 
 print("[INFO]: INITIALIZING DATABASE")
@@ -26,6 +33,8 @@ MONGODB_CLI = MongoClient(MONGO_DB_URI)
 db = MONGODB_CLI.wbb
 SUDOERS = SUDO_USERS
 OWNER = OWNER_ID
+
+
 async def load_sudoers():
     global SUDOERS
     print("[INFO]: LOADING SUDO USERS")
@@ -40,12 +49,12 @@ async def load_sudoers():
             )
     SUDOERS = (SUDOERS + sudoers) if sudoers else SUDOERS
     print("[INFO]: LOADED SUDO USERS")
+
+
 loop = asyncio.get_event_loop()
 loop.run_until_complete(load_sudoers())
 Music_START_TIME = time.time()
 loop = asyncio.get_event_loop()
-
-
 
 
 BOT_ID = 0
@@ -57,7 +66,7 @@ ASSUSERNAME = ""
 ASSMENTION = ""
 print("[INFO]: INITIALIZING BOT CLIENT")
 app = Client(
-    'MusicBot',
+    "MusicBot",
     API_ID,
     API_HASH,
     bot_token=BOT_TOKEN,
@@ -66,7 +75,8 @@ aiohttpsession = ClientSession()
 
 client = Client(config.SESSION_NAME, config.API_ID, config.API_HASH)
 
-def all_info(app, call_py, ASS_ACC, client):
+
+def all_info(app, client):
     global BOT_ID, BOT_NAME, BOT_USERNAME
     global ASSID, ASSNAME, ASSMENTION, ASSUSERNAME
     getme = app.get_me()
@@ -85,15 +95,12 @@ def all_info(app, call_py, ASS_ACC, client):
     )
     ASSUSERNAME = getme1.username
     ASSMENTION = getme1.mention
-    
 
-    
+
 print("[INFO]: STARTING BOT CLIENT")
 app.start()
-ASS_ACC.start()
 print("[INFO]: STARTING ASSISTANT CLIENT")
 client.start()
-call_py.start()
 print("[INFO]: LOADING BOT/ASSISTANT PROFILE INFO")
-all_info(app, call_py, ASS_ACC, client)
+all_info(app, client)
 print("[INFO]: LOADED BOT/ASSISTANT PROFILE INFO")
