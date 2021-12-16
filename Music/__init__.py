@@ -9,7 +9,7 @@ import uvloop
 from Music import config
 import importlib
 from pyrogram import Client as Bot
-from Music.config import API_ID, API_HASH, BOT_TOKEN, MONGO_DB_URI, SUDO_USERS, LOG_GROUP_ID, OWNER_ID
+from Music.config import API_ID, API_HASH, BOT_TOKEN, MONGO_DB_URI, SUDO_USERS, LOG_GROUP_ID, ASS_ACC, call_py, OWNER_ID
 from pyrogram import Client
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
@@ -66,7 +66,7 @@ aiohttpsession = ClientSession()
 
 client = Client(config.SESSION_NAME, config.API_ID, config.API_HASH)
 
-def all_info(app, client):
+def all_info(app, call_py, ASS_ACC, client):
     global BOT_ID, BOT_NAME, BOT_USERNAME
     global ASSID, ASSNAME, ASSMENTION, ASSUSERNAME
     getme = app.get_me()
@@ -90,8 +90,10 @@ def all_info(app, client):
     
 print("[INFO]: STARTING BOT CLIENT")
 app.start()
+ASS_ACC.start()
 print("[INFO]: STARTING ASSISTANT CLIENT")
 client.start()
+call_py.start()
 print("[INFO]: LOADING BOT/ASSISTANT PROFILE INFO")
-all_info(app, client)
+all_info(app, call_py, ASS_ACC, client)
 print("[INFO]: LOADED BOT/ASSISTANT PROFILE INFO")
