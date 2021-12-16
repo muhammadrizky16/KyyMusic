@@ -17,8 +17,3 @@ ASS_ID = int(getenv("ASS_ID", '2130437611'))
 OWNER_ID = list(map(int, getenv('OWNER_ID', '').split()))
 GROUP = getenv("GROUP", None)
 CHANNEL = getenv("CHANNEL", None)
-ASS_ACC = Client(
-    API_ID,
-    API_HASH,
-)
-call_py = PyTgCalls(ASS_ACC)
