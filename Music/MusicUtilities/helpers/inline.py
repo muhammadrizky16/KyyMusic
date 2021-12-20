@@ -371,7 +371,6 @@ def setting_markup():
         ],
         [
             InlineKeyboardButton(text="✖️ ᴄʟᴏsᴇ", callback_data="close"),
-            InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ", callback_data="okaybhai"),
         ],
     ]
     return f"🔧  **{BOT_NAME} Settings**", buttons
