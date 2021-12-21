@@ -6,9 +6,12 @@ import time
 import uvloop
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
+from motor.motor_asyncio import AsyncIOMotorClient as Bot
+from Music.config import MONGO_DB_URI as mango
 from pyrogram import Client
 from pyrogram import Client as Bot
 
+from Music.converter.cli import app, userbot
 from Music import config
 from Music.config import (
     API_HASH,
@@ -24,6 +27,19 @@ from Music.config import (
 def initialize():
     global dbb
     dbb = {}
+
+### Mongo DB
+MONGODB_CLI = Bot(mango)
+db = MONGODB_CLI
+pymongodb = ""
+
+### Boot Time
+boottime = time.time()
+
+### Clients
+app = app
+userbot = userbot
+aiohttpsession = ClientSession()
 
 
 initialize()
