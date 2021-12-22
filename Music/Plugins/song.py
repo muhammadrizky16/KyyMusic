@@ -126,7 +126,7 @@ Kembalikan ke Akun Pengguna Dari Hak Admin.
         )
         hmo = await message.reply_text(
             f"""
-<b>✨ Silahkan Pilih Maba Yang Ingin Didownload</b>
+<b>✨ Silahkan Pilih Mana Yang Ingin Didownload</b>
 
 
 ¹ <b>{title1[:20]}</b>
@@ -286,7 +286,7 @@ async def chonga(_, CallbackQuery):
         )
         await CallbackQuery.edit_message_text(
             f"""
-<b>✨ Silahkan Pilih Maba Yang Ingin Didownload</b>
+<b>✨ Silahkan Pilih Mana Yang Ingin Didownload</b>
 
 
 ⁶ <b>{title6[:20]}</b>
@@ -329,7 +329,7 @@ async def chonga(_, CallbackQuery):
         )
         await CallbackQuery.edit_message_text(
             f"""
-<b>✨ Silahkan Pilih Maba Yang Ingin Didownload</b>
+<b>✨ Silahkan Pilih Mana Yang Ingin Didownload</b>
 
 
 ¹ <b>{title1[:20]}</b>
