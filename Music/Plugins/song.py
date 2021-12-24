@@ -131,23 +131,18 @@ Kembalikan ke Akun Pengguna Dari Hak Admin.
 
 ¹ <b>{title1[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
 ² <b>{title2[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
 ³ <b>{title3[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
 ⁴ <b>{title4[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
 ⁵ <b>{title5[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -334,23 +329,18 @@ async def chonga(_, CallbackQuery):
 
 ¹ <b>{title1[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
 ² <b>{title2[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
 ³ <b>{title3[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
 ⁴ <b>{title4[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 
 ⁵ <b>{title5[:20]}</b>
 ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})
-└ ⚡ **Didukung:** [{BOT_NAME}](t.me/{BOT_USERNAME})
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
