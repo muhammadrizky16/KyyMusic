@@ -7,7 +7,7 @@ from Music.MusicUtilities.helpers.filters import command
 
 @Client.on_message(command("musicplayer") & filters.user(SUDOERS))
 async def smex(_, message):
-    usage = "**Usage:**\n/musicplayer [on|off]"
+    usage = "**Penggunaan:**\n/musicplayer [on|off]"
     if len(message.command) != 2:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -16,10 +16,10 @@ async def smex(_, message):
     if state == "on":
         user_id = 1
         await add_on(user_id)
-        await message.reply_text("✅ Music Enabled for Maintenance")
+        await message.reply_text("✅ Musik Diaktifkan untuk Pemeliharaan")
     elif state == "off":
         user_id = 1
         await add_off(user_id)
-        await message.reply_text("❌ Maintenance Mode Disabled")
+        await message.reply_text("❌ Mode Pemeliharaan Dinonaktifkan")
     else:
         await message.reply_text(usage)
