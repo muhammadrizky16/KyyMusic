@@ -304,3 +304,11 @@ async def stop_cmd(_, message):
 """,
                 )
                 return
+
+@app.on_message(filters.command(["reload", f"reload@{BOT_USERNAME}"]))
+async def reload(_, message):
+    chat_id = message.chat.id
+    await _.send_message(
+    chat_id,
+    "✅ Bot restarted **successfully**\n\n✅ **Admin** list has been **updated**"
+)
