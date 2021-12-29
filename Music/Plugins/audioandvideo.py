@@ -101,17 +101,17 @@ async def getspy(_,CallbackQuery):
             if "audio" in check:
                 j += 1
                 if j == 1:
-                    a1 = InlineKeyboardButton(text=f"Audio 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")
+                    a1 = InlineKeyboardButton(text=f"ᴀᴜᴅɪᴏ 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")
                 if j == 2:
-                    a2 = InlineKeyboardButton(text=f"Audio 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")
+                    a2 = InlineKeyboardButton(text=f"ᴀᴜᴅɪᴏ 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")
                 if j == 3:
-                    a3 = InlineKeyboardButton(text=f"Audio 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}") 
+                    a3 = InlineKeyboardButton(text=f"ᴀᴜᴅɪᴏ 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}") 
                 if j == 4:
-                    a4 = InlineKeyboardButton(text=f"Audio 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")
+                    a4 = InlineKeyboardButton(text=f"ᴀᴜᴅɪᴏ 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")
                 if j == 5:
-                    a5 = InlineKeyboardButton(text=f"Audio 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")
+                    a5 = InlineKeyboardButton(text=f"ᴀᴜᴅɪᴏ 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")
                 if j == 6:
-                    a6 = InlineKeyboardButton(text=f"Audio 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")  
+                    a6 = InlineKeyboardButton(text=f"ᴀᴜᴅɪᴏ 🎵 {humanbytes(x['filesize'])}", callback_data=f"ytdata audio||{x['format_id']}||{videoid}")  
         elif type == "video":
             if str(133) in check:
                 a += 1
@@ -161,7 +161,7 @@ async def getspy(_,CallbackQuery):
                     a1,
                 ],
                 [
-                    InlineKeyboardButton(text="⌫", callback_data=f'good {videoid}|{user_id}'),
+                    InlineKeyboardButton(text="⪻", callback_data=f'good {videoid}|{user_id}'),
                     InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data=f'close2')
                 ]    
             ]
@@ -174,7 +174,7 @@ async def getspy(_,CallbackQuery):
                     a2,
                 ],
                 [
-                    InlineKeyboardButton(text="⌫", callback_data=f'good {videoid}|{user_id}'),
+                    InlineKeyboardButton(text="⪻", callback_data=f'good {videoid}|{user_id}'),
                     InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data=f'close2')
                 ]    
             ]
@@ -190,7 +190,7 @@ async def getspy(_,CallbackQuery):
                     a3,
                 ],
                 [
-                    InlineKeyboardButton(text="⌫", callback_data=f'good {videoid}|{user_id}'),
+                    InlineKeyboardButton(text="⪻", callback_data=f'good {videoid}|{user_id}'),
                     InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data=f'close2')
                 ]    
             ]
@@ -207,7 +207,7 @@ async def getspy(_,CallbackQuery):
                     a4,
                 ],
                 [
-                    InlineKeyboardButton(text="⌫", callback_data=f'good {videoid}|{user_id}'),
+                    InlineKeyboardButton(text="⪻", callback_data=f'good {videoid}|{user_id}'),
                     InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data=f'close2')
                 ]    
             ]
@@ -227,7 +227,7 @@ async def getspy(_,CallbackQuery):
                     a5,
                 ],
                 [
-                    InlineKeyboardButton(text="⌫", callback_data=f'good {videoid}|{user_id}'),
+                    InlineKeyboardButton(text="⪻", callback_data=f'good {videoid}|{user_id}'),
                     InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data=f'close2')
                 ]    
             ]
@@ -248,7 +248,7 @@ async def getspy(_,CallbackQuery):
                     a6,
                 ],
                 [
-                    InlineKeyboardButton(text="⌫", callback_data=f'good {videoid}|{user_id}'),
+                    InlineKeyboardButton(text="⪻", callback_data=f'good {videoid}|{user_id}'),
                     InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data=f'close2')
                 ]    
             ]
@@ -279,7 +279,7 @@ async def ytdata(_,CallbackQuery):
                     a2,
                 ],
                 [
-                    InlineKeyboardButton(text="⌫", callback_data=f'good {videoid}|{user_id}'),
+                    InlineKeyboardButton(text="⪻", callback_data=f'good {videoid}|{user_id}'),
                     InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data=f'close2')
                 ]    
             ]
@@ -309,7 +309,7 @@ def inl_mark(videoid, user_id):
                 InlineKeyboardButton(text="Download or Upload Failed......", callback_data=f'down')
             ],
             [
-                InlineKeyboardButton(text="⌫", callback_data=f'good {videoid}|{user_id}'),
+                InlineKeyboardButton(text="⪻", callback_data=f'good {videoid}|{user_id}'),
                 InlineKeyboardButton(text="ᴛᴜᴛᴜᴘ", callback_data=f'close2')
             ],
         ]
@@ -442,10 +442,10 @@ __Youtube Inline Download Powered By Music__ """
 def p_mark(link, channel):
     buttons= [
             [
-                InlineKeyboardButton(text="Watch on Youtube", url=f'{link}')
+                InlineKeyboardButton(text="ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ", url=f'{link}')
             ],
             [ 
-                InlineKeyboardButton(text="Visit Youtube Channel", url=f'{channel}')
+                InlineKeyboardButton(text="ᴠɪsɪᴛ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ", url=f'{channel}')
             ],
         ]
     return buttons    
