@@ -125,7 +125,7 @@ Kembalikan ke Akun Pengguna Dari Hak Admin.
             query,
         )
         hmo = await message.reply_text(
-            f"**✨ Silahkan Pilih Mana Yang Ingin Didownload**\n\n¹ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n² <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n³ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>",    
+            f"**✨ Silahkan Pilih Mana Yang Ingin Didownload**\n\n¹ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n² <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n³ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -263,7 +263,7 @@ async def chonga(_, CallbackQuery):
             query,
         )
         await CallbackQuery.edit_message_text(
-            f"**✨ Silahkan Pilih Mana Yang Ingin Didownload**⁶ <b>{title6[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁷ <b>{title7[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁸ <b>{title8[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁹ <b>{title9[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n¹⁰ <b>{title10[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>",    
+            f"**✨ Silahkan Pilih Mana Yang Ingin Didownload**⁶ <b>{title6[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁷ <b>{title7[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁸ <b>{title8[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁹ <b>{title9[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n¹⁰ <b>{title10[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -284,7 +284,7 @@ async def chonga(_, CallbackQuery):
             query,
         )
         await CallbackQuery.edit_message_text(
-            f"**✨ Silahkan Pilih Mana Yang Ingin Didownload**¹ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n² <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n³ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>",    
+            f"**✨ Silahkan Pilih Mana Yang Ingin Didownload**¹ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n² <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n³ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ <u>__Powered by {BOT_NAME}__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True 
         )  
@@ -326,11 +326,11 @@ def search_markup(
         ],
         [
             InlineKeyboardButton(
-                text="⬅️", callback_data=f"chonga 1|{query}|{user_id}"
+                text="⪻", callback_data=f"chonga 1|{query}|{user_id}"
             ),
-            InlineKeyboardButton(text="❌", callback_data=f"ppcl2 smex|{user_id}"),
+            InlineKeyboardButton(text="✘", callback_data=f"ppcl2 smex|{user_id}"),
             InlineKeyboardButton(
-                text="➡️", callback_data=f"chonga 1|{query}|{user_id}"
+                text="⪼", callback_data=f"chonga 1|{query}|{user_id}"
             ),
         ],
     ]
@@ -373,11 +373,11 @@ def search_markup2(
         ],
         [
             InlineKeyboardButton(
-                text="⬅️", callback_data=f"chonga 2|{query}|{user_id}"
+                text="⪻", callback_data=f"chonga 2|{query}|{user_id}"
             ),
-            InlineKeyboardButton(text="❌", callback_data=f"ppcl2 smex|{user_id}"),
+            InlineKeyboardButton(text="✘", callback_data=f"ppcl2 smex|{user_id}"),
             InlineKeyboardButton(
-                text="➡️", callback_data=f"chonga 2|{query}|{user_id}"
+                text="⪼", callback_data=f"chonga 2|{query}|{user_id}"
             ),
         ],
     ]
