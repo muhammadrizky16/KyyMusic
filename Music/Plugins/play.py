@@ -150,7 +150,7 @@ Kembalikan kembali ke Akun Pengguna Dari Hak Admin.
         LOG_ID = "-100156899495"
         if int(chat_id) != int(LOG_ID):
             return await message.reply_text(
-                f"Bot sedang dalam Pemeliharaan. Maaf untuk ketidaknyamanannya!"
+                f"Bot sedang dalam proses peng Updatean. Maaf untuk ketidaknyamanannya!"
             )
         return await message.reply_text(
             f"Bot sedang dalam Pemeliharaan. Maaf untuk ketidaknyamanannya!"
