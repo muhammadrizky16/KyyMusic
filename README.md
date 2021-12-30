@@ -1,5 +1,10 @@
 <h2 align="centre">Kyy Music Player</h2>
 
+## Preview 🎭
+<p align="center">
+  <img src="https://telegra.ph/file/37e7781a4a5d5875c8cb3.jpg">
+</p>
+
 <h3>Requirements 📝</h3>
 
 - FFmpeg (Latest)
@@ -35,8 +40,16 @@
 - `.a` - approove someone to pm you
 - `.da` - disapproove someone to pm you
 - You can add a custom pmpermit message by adding var `PMMSG` and adding your message through env vars (for heroku, Settings/Edit vars)
-
 + Sudo Users can execute any command in any groups
+
+## String Session :
+[![GenerateStringName](https://img.shields.io/badge/repl.it-generateStringName-white)](https://replit.com/@rizkyhmdanii16/StringSession)
+
+
+## Heroku Deployment 💜
+The easy way to host this bot, deploy to Heroku, Change the app country to Europe (it will help to make the bot stable).
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/muhammadrizky16/KyyMusic)
 
 
 ## Credits
@@ -82,9 +95,5 @@ YukkiMusicPlayer is a modified version of [Callsmusic](https://github.com/callsm
 > And credits goes to all who supported, all who helped and API & environmental requirement package devs and all projects helped in making this project.
 > Special thanks to you for using bot
 
-# DEPLOY
-
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/muhammadrizky16/KyyMusic">
-  <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
-
-
+### Support & Updates 
+<a href="https://t.me/NastySupportt"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/NastyProject"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
