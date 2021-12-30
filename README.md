@@ -1,6 +1,5 @@
 <h2 align="centre">Kyy Music Player</h2>
 
-## Preview 🎭
 <p align="center">
   <img src="https://telegra.ph/file/37e7781a4a5d5875c8cb3.jpg">
 </p>
