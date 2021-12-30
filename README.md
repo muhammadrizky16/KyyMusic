@@ -61,7 +61,7 @@ The easy way to host this bot, deploy to Heroku, Change the app country to Europ
 - PyTgCalls
 
 #### Contributors
-- [Kyy](https://github.com/muhammadrizky16): Devs Nasty
+- [Kyy](https://github.com/muhammadrizky16): Nasty Owner
 - [KenKan](https://github.com/kenkansaja): Contributor
 - [xD_ShaShank](https://github.com/theshashankk): Yukki Dev
 - [VegetaxD](http://github.com/VegetaxD): Yukki Owner 
