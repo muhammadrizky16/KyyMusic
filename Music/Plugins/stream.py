@@ -194,9 +194,9 @@ async def vplay(c: Client, message: Message):
                 pos = add_to_queue(chat_id, songname, dl, link, "Video", Q)
                 await loser.delete()
                 requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
-                await app.send_message(
-                    chat_id,
-                    f"""
+                await message.reply_photo(
+                    photo="cache/IMG_20211230_165039_159.jpg",
+                    caption=f"""
 💡 **Trek ditambahkan ke antrian**
 
 🏷 **Nama:** [{songname[:999]}]({link})
@@ -204,7 +204,6 @@ async def vplay(c: Client, message: Message):
 
 #️⃣ **Posisi antrian** {pos}
 """,
-                    disable_web_page_preview=True,
                     reply_markup=keyboard,
                 )
             else:
@@ -226,9 +225,9 @@ async def vplay(c: Client, message: Message):
                 add_to_queue(chat_id, songname, dl, link, "Video", Q)
                 await loser.delete()
                 requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
-                await app.send_message(
-                    chat_id,
-                    f"""
+                await message.reply_photo(
+                    photo="cache/IMG_20211230_165039_159.jpg",
+                    caption=f"""
 ▶️ **Streaming video dimulai**
 
 🏷 **Nama:** [{songname[:999]}]({link})
@@ -236,7 +235,6 @@ async def vplay(c: Client, message: Message):
 
 💬 **Diputar di:** {message.chat.title}
 """,
-                    disable_web_page_preview=True,
                     reply_markup=keyboard,
                 )
 
@@ -268,9 +266,9 @@ async def vplay(c: Client, message: Message):
                         pos = add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                         await loser.delete()
                         requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
-                        await app.send_message(
-                                chat_id,
-                                f"""
+                        await message.reply_photo(
+                            photo="cache/IMG_20211230_165039_159.jpg",
+                            caption=f"""
 💡 **Trek ditambahkan ke antrian**
 
 🏷 **Nama:** [{songname[:999]}]({url})
@@ -279,9 +277,9 @@ async def vplay(c: Client, message: Message):
 
 #️⃣ **Posisi antrian** {pos}
 """,
-                            disable_web_page_preview=True,
                             reply_markup=keyboard,
                         )
+                    
                     else:
                         try:
                             await call_py.join_group_call(
@@ -296,9 +294,10 @@ async def vplay(c: Client, message: Message):
                             add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
                             await loser.delete()
                             requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
-                            await app.send_message(
-                                chat_id,
-                                f"""
+                            thumb ="cache/IMG_20211230_165039_159.jpg"
+                            await message.reply_photo(
+                                photo="cache/IMG_20211230_165039_159.jpg",
+                                caption=f"""
 ▷ **Memutar video dimulai**
 
 🏷 **Nama:** [{songname[:999]}]({url})
@@ -307,7 +306,6 @@ async def vplay(c: Client, message: Message):
 
 💬 **Diputar di:** {message.chat.title}
 """,
-                                disable_web_page_preview=True,
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
