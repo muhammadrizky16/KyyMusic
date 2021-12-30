@@ -195,7 +195,7 @@ async def vplay(c: Client, message: Message):
                 await loser.delete()
                 requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
                 await message.reply_photo(
-                    photo="cache/IMG_20211230_165039_159.jpg",
+                    photo="cache/IMG_20211230_211039_090.jpg",
                     caption=f"""
 💡 **Trek ditambahkan ke antrian**
 
@@ -226,7 +226,7 @@ async def vplay(c: Client, message: Message):
                 await loser.delete()
                 requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
                 await message.reply_photo(
-                    photo="cache/IMG_20211230_165039_159.jpg",
+                    photo="cache/IMG_20211230_211039_090.jpg",
                     caption=f"""
 ▶️ **Streaming video dimulai**
 
@@ -267,7 +267,7 @@ async def vplay(c: Client, message: Message):
                         await loser.delete()
                         requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
                         await message.reply_photo(
-                            photo="cache/IMG_20211230_165039_159.jpg",
+                            photo="cache/IMG_20211230_211039_090.jpg",
                             caption=f"""
 💡 **Trek ditambahkan ke antrian**
 
@@ -296,7 +296,7 @@ async def vplay(c: Client, message: Message):
                             requester = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
                             thumb ="cache/IMG_20211230_165039_159.jpg"
                             await message.reply_photo(
-                                photo="cache/IMG_20211230_165039_159.jpg",
+                                photo="cache/IMG_20211230_211039_090.jpg",
                                 caption=f"""
 ▷ **Memutar video dimulai**
 
