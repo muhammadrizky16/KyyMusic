@@ -290,7 +290,7 @@ async def ytdata(_,CallbackQuery):
 inl = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="Downloading......", callback_data=f'down')
+                    InlineKeyboardButton(text="ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ......", callback_data=f'down')
                 ]   
             ]
         )
@@ -298,7 +298,7 @@ inl = InlineKeyboardMarkup(
 upl = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="Uploading......", callback_data=f'down')
+                    InlineKeyboardButton(text="ᴜᴘʟᴏᴀᴅɪɴɢ......", callback_data=f'down')
                 ]   
             ]
         )
