@@ -192,51 +192,44 @@ Saya perlu menjadi admin dengan beberapa izin:
             + "\n❌ BAN PENGGUNA"
         )
         return
-    try:
-        b = await app.get_chat_member(message.chat.id, ASSID)
+    try: 
+        b = await app.get_chat_member(message.chat.id , ASSID) 
         if b.status == "kicked":
-            await message.reply_text(
-                f"""
-{ASSNAME}(@{ASSUSERNAME}) dibanned di obrolan Anda **{chat_title}**
-
-Unban terlebih dahulu untuk menggunakan
+            await app.unban_chat_member(message.chat.id, ASSID)
+            invite_link = await app.export_chat_invite_link(message.chat.id)
+            if "+" in invite_link:
+                kontol = (invite_link.replace("+", "")).split("t.me/")[1]
+                link_bokep = f"https://t.me/joinchat/{kontol}"
+            await ASS_ACC.join_chat(link_bokep)
+            await message.reply(f"{ASSNAME} Berhasil Bergabung",) 
+            await remove_active_chat(chat_id)
+    except UserNotParticipant:
+        try:
+            invite_link = await app.export_chat_invite_link(message.chat.id)
+            if "+" in invite_link:
+                kontol = (invite_link.replace("+", "")).split("t.me/")[1]
+                link_bokep = f"https://t.me/joinchat/{kontol}"
+            await ASS_ACC.join_chat(link_bokep)
+            await message.reply(f"{ASSNAME} Berhasil Bergabung",) 
+            await remove_active_chat(chat_id)
+        except UserAlreadyParticipant:
+            pass
+        except Exception as e:
+            return await message.reply_text(
+                    f"""
+**Asisten Gagal Bergabung**
+**Alasan**:{e}
+"""
+                )
+    except UserAlreadyParticipant:
+        pass
+    except Exception as e:
+        return await message.reply_text(
+                    f"""
+**Asisten Gagal Bergabung**
+**Alasan**:{e}
 """
             )
-            return
-    except UserNotParticipant:
-        if message.chat.username:
-            try:
-                await ASS_ACC.join_chat(f"{message.chat.username}")
-                await message.reply(
-                    f"{ASSNAME} Berhasil Bergabung",
-                )
-                await remove_active_chat(chat_id)
-            except Exception as e:
-                await message.reply_text(
-                    f"""
-**Asisten Gagal Bergabung**
-**Alasan**:{e}
-"""
-                )
-                return
-        else:
-            try:
-                invite_link = await message.chat.export_invite_link()
-                if "+" in invite_link:
-                    kontol = (invite_link.replace("+", "")).split("t.me/")[1]
-                    link_bokep = f"https://t.me/joinchat/{kontol}"
-                await ASS_ACC.join_chat(link_bokep)
-                await message.reply(f"{ASSNAME} Berhasil Bergabung",)
-                await remove_active_chat(chat_id)
-            except UserAlreadyParticipant:
-                pass
-            except Exception as e:
-                return await message.reply_text(
-                    f"""
-**Asisten Gagal Bergabung**
-**Alasan**:{e}
-"""
-                )
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
