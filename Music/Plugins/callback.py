@@ -559,7 +559,7 @@ Personal Playlist Playing."""
                     a1,
                 ],
                 [
-                    InlineKeyboardButton(text="🗑 Close Menu​", callback_data=f'close2')
+                    InlineKeyboardButton(text="ᴄʟᴏsᴇ​", callback_data=f'close2')
                 ]    
             ]
         )
@@ -706,7 +706,7 @@ Group Playlist Playing."""
                     a1,
                 ],
                 [
-                    InlineKeyboardButton(text="🗑 Close Menu​", callback_data=f'close2')
+                    InlineKeyboardButton(text="ᴄʟᴏsᴇ​", callback_data=f'close2')
                 ]    
             ]
         )
@@ -850,7 +850,7 @@ async def P_list(_,CallbackQuery):
         user_id = CallbackQuery.from_user.id
         user_name = CallbackQuery.from_user.first_name
         a2 = InlineKeyboardButton(text=f"Play {user_name[:17]}'s Playlist", callback_data=f'play_playlist {user_id}|personal')
-        a3 = InlineKeyboardButton(text=f"📨 Check Playlist", url=urlxp)
+        a3 = InlineKeyboardButton(text=f"ᴄʜᴇᴄᴋ ᴘʟᴀʏʟɪsᴛ", url=urlxp)
         key = InlineKeyboardMarkup(
             [
                 [
@@ -858,7 +858,7 @@ async def P_list(_,CallbackQuery):
                 ],
                 [
                     a3,
-                    InlineKeyboardButton(text="🗑 Close Menu", callback_data=f'close2')
+                    InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f'close2')
                 ]    
             ]
         )
@@ -905,7 +905,7 @@ async def G_list(_,CallbackQuery):
         user_id = CallbackQuery.from_user.id
         user_name = CallbackQuery.from_user.first_name
         a1 = InlineKeyboardButton(text=f"Play Group's Playlist", callback_data=f'play_playlist {user_id}|group')
-        a3 = InlineKeyboardButton(text=f"📨 Check Playlist", url=urlxp)
+        a3 = InlineKeyboardButton(text=f"ᴄʜᴇᴄᴋ ᴘʟᴀʏʟɪsᴛ", url=urlxp)
         key = InlineKeyboardMarkup(
             [
                 [
@@ -913,7 +913,7 @@ async def G_list(_,CallbackQuery):
                 ],
                 [
                     a3,
-                    InlineKeyboardButton(text="🗑 Close Menu", callback_data=f'close2')
+                    InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data=f'close2')
                 ]    
             ]
         )
