@@ -88,6 +88,7 @@ from Music.MusicUtilities.database.assistant import (
     save_assistant,
 )
 from Music.config import DURATION_LIMIT
+from Music.MusicUtilities.helpers.decorators import authorized_users_only
 from Music.MusicUtilities.helpers.decorators import errors
 from Music.MusicUtilities.helpers.filters import command
 from Music.MusicUtilities.helpers.gets import (
@@ -131,6 +132,56 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
+chat_id = None
+DISABLED_GROUPS = []
+useer = "NaN"
+que = {}
+
+
+
+@app.on_message(
+    command("music") & ~filters.edited & ~filters.bot & ~filters.private
+)
+@authorized_users_only
+async def music_onoff(_, message: Message):
+    chat_id = message.chat.id
+    user_id = message.from_user.id
+    chat_title = message.chat.title
+    global DISABLED_GROUPS
+    try:
+        user_id
+    except:
+        return
+    if len(message.command) != 2:
+        await message.reply_text("**• usage:**\n\n `/music on` & `/music off`")
+        return
+    status = message.text.split(None, 1)[1]
+    message.chat.id
+    if status in ("ON", "on", "On"):
+        lel = await message.reply("`processing...`")
+        if not message.chat.id in DISABLED_GROUPS:
+            await lel.edit("» **Music Aktif.**")
+            return
+        DISABLED_GROUPS.remove(message.chat.id)
+        await lel.edit(
+            f"**✅ Music Telah Di Diaktifkan Di {message.chat.title}**"
+        )
+
+    elif status in ("OFF", "off", "Off"):
+        lel = await message.reply("`processing...`")
+
+        if message.chat.id in DISABLED_GROUPS:
+            await lel.edit("» **Music Di Nonaktifkan.**")
+            return
+        DISABLED_GROUPS.append(message.chat.id)
+        await lel.edit(
+            f"**✅ Music Telah Di Nonaktifkan Di {message.chat.title}**"
+        )
+    else:
+        await message.reply_text(
+            "**• Penggunaan:**\n\n `/music on` & `/music off`"
+        )
+
 
 @Client.on_message(command(["play", f"play@{BOT_USERNAME}", "p"]))
 async def play(_, message: Message):
@@ -142,6 +193,12 @@ Anda adalah Admin Anonim!
 Kembalikan kembali ke Akun Pengguna Dari Hak Admin.
 """
         )
+    global useer
+    if chat_id in DISABLED_GROUPS:
+        return await message.reply_text(
+            f"😕 **Maap {message.from_user.mention}, Musicnya Dimatiin Sama Admin**" 
+        )
+        return
     user_id = message.from_user.id
     chat_title = message.chat.title
     username = message.from_user.first_name
