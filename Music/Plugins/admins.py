@@ -8,7 +8,6 @@ from pyrogram.types import (
 from Music import app
 from Music.MusicUtilities.helpers.decorators import errors
 from Music.MusicUtilities.helpers.filters import command, other_filters
-from Music.MusicUtilities.heleprs.admins import AdminRightsCheck
 from Music.MusicUtilities.database.queue import (
     is_active_chat,
     add_active_chat,
@@ -103,7 +102,6 @@ async def stop_cmd(_, message):
     await message.reply_text("Menghapus Databae, Antrian, Log, File Mentah, Unduhan.")
     
 @app.on_message(filters.command(["pause", f"pause@{BOT_USERNAME}", "ps"]))
-@AdminRightsCheck
 async def pause_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
@@ -122,7 +120,6 @@ async def pause_cmd(_, message):
     await message.reply_text(f"🎧 Obrolan Suara Dijeda oleh {checking}!")
     
 @app.on_message(filters.command(["resume", f"resume@{BOT_USERNAME}", "rs"]))
-@AdminRightsCheck
 async def stop_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
@@ -142,7 +139,6 @@ async def stop_cmd(_, message):
         await message.reply_text(f"**🎧 Obrolan Suara Dilanjutkan Oleh {checking}!**")
 
 @app.on_message(filters.command(["end", f"end@{BOT_USERNAME}", "e"]))
-@AdminRightsCheck
 async def stop_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
@@ -164,7 +160,6 @@ async def stop_cmd(_, message):
         return await message.reply_text("Saya tidak berpikir jika ada sesuatu yang diputar di obrolan suara")
     
 @app.on_message(filters.command(["skip", f"skip@{BOT_USERNAME}", "sk"]))
-@AdminRightsCheck
 async def stop_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("Kamu adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna.") 
