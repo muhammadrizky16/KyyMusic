@@ -21,6 +21,7 @@ from Music.MusicUtilities.database.auth import (_get_authusers, add_nonadmin_cha
                    get_authuser, get_authuser_count, get_authuser_names,
                    is_nonadmin_chat, remove_nonadmin_chat, save_authuser)
 from Music.MusicUtilities.database.blacklistchat import blacklist_chat, blacklisted_chats, whitelist_chat
+from Music.MusicUtilities.helpers.admins import ActualAdminCB
 from Music.MusicUtilities.helpers.inline import personal_markup, setting_markup
 from Music.MusicUtilities.helpers.inline import (custommarkup, dashmarkup, setting_markup,
                           start_pannel, usermarkup, volmarkup)
@@ -250,6 +251,7 @@ async def settingm(_, CallbackQuery):
     )
 
 @app.on_callback_query(filters.regex("EVE"))
+@ActualAdminCB
 async def EVE(_, CallbackQuery):
     checking = CallbackQuery.from_user.username
     text, buttons = usermarkup()
@@ -268,6 +270,7 @@ async def EVE(_, CallbackQuery):
         )
 
 @app.on_callback_query(filters.regex("AMS"))
+@ActualAdminCB
 async def AMS(_, CallbackQuery):
     checking = CallbackQuery.from_user.username
     text, buttons = usermarkup()
