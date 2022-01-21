@@ -3,6 +3,8 @@ import asyncio
 import importlib
 import time
 
+from rich.console import Console
+import heroku3
 import uvloop
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
@@ -10,7 +12,11 @@ from motor.motor_asyncio import AsyncIOMotorClient as Bot
 from Music.config import MONGO_DB_URI as mango
 from pyrogram import Client
 from pyrogram import Client as Bot
+from os import listdir, mkdir
+from git import Repo
+from git.exc import GitCommandError, InvalidGitRepositoryError
 
+from Music.MusicUtilities.helpers.tasks import install_requirements
 from Music.converter.cli import app, userbot
 from Music import config
 from Music.config import (
@@ -20,9 +26,14 @@ from Music.config import (
     LOG_GROUP_ID,
     MONGO_DB_URI,
     OWNER_ID,
+    UPSTREAM_BRANCH, 
+    UPSTREAM_REPO,
     SUDO_USERS,
+    CHANNEL,
+    GROUP,
 )
 
+console = Console()
 
 def initialize():
     global dbb
@@ -44,13 +55,16 @@ aiohttpsession = ClientSession()
 
 initialize()
 
+UPSTREAM_BRANCH = UPSTREAM_BRANCH
+UPSTREAM_REPO = UPSTREAM_REPO
+
 print("[INFO]: INITIALIZING DATABASE")
 MONGODB_CLI = MongoClient(MONGO_DB_URI)
 db = MONGODB_CLI.wbb
 SUDOERS = SUDO_USERS
 OWNER = OWNER_ID
-
-
+CHANNEL = CHANNEL
+GROUP = GROUP
 async def load_sudoers():
     global SUDOERS
     print("[INFO]: LOADING SUDO USERS")
@@ -65,12 +79,45 @@ async def load_sudoers():
             )
     SUDOERS = (SUDOERS + sudoers) if sudoers else SUDOERS
     print("[INFO]: LOADED SUDO USERS")
-
+    try:
+        repo = Repo()
+    except GitCommandError:
+        console.print("┌ [red] Checking Git Updates!")
+        console.print("└ [red]Git Command Error\n")
+        return
+    except InvalidGitRepositoryError:
+        console.print("┌ [red] Checking Git Updates!")
+        repo = Repo.init()
+        if "origin" in repo.remotes:
+            origin = repo.remote("origin")
+        else:
+            origin = repo.create_remote("origin", UPSTREAM_REPO)
+        origin.fetch()
+        repo.create_head(UPSTREAM_BRANCH, origin.refs[UPSTREAM_BRANCH])
+        repo.heads[UPSTREAM_BRANCH].set_tracking_branch(
+            origin.refs[UPSTREAM_BRANCH]
+        )
+        repo.heads[UPSTREAM_BRANCH].checkout(True)
+        try:
+            repo.create_remote("origin", UPSTREAM_REPO)
+        except BaseException:
+            pass
+        nrs = repo.remote("origin")
+        nrs.fetch(UPSTREAM_BRANCH)
+        try:
+            nrs.pull(UPSTREAM_BRANCH)
+        except GitCommandError:
+            repo.git.reset("--hard", "FETCH_HEAD")
+        await install_requirements(
+            "pip3 install --no-cache-dir -r requirements.txt"
+        )
+        console.print("└ [red]Git Client Update Completed\n")
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(load_sudoers())
 Music_START_TIME = time.time()
 loop = asyncio.get_event_loop()
+
 
 
 BOT_ID = 0
