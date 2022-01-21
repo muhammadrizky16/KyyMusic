@@ -2,7 +2,7 @@
     "name": "KyyMusic",
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/muhamadrizky16/KyyMusic",
+    "repository": "https://github.com/muhamadrizky16/KyyXMusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -34,6 +34,16 @@
             "required": true,
             "value": ""
         },
+        "HEROKU_API_KEY": {
+            "description": "Your Heroku account's API key",
+            "value": "",
+            "required": false
+        },
+        "HEROKU_APP_NAME": {
+           "description": "Your heroku app/bot's name",
+           "value": "",
+           "required": false
+        },
         "GROUP": {
             "description": "Isi dengan username group tanpa @",
             "required": true,
@@ -58,6 +68,16 @@
             "description": "fill with your bot token get from @BotFather on telegram",
             "required": true,
             "value": ""
+        },
+        "UPSTREAM_REPO": {
+            "description": "If you dont know this, Leave as it is",
+            "value": "https://github.com/muhammadrizky16/KyyMusic",
+            "required": true
+        },
+        "UPSTREAM_BRANCH": {
+            "description": "Repo's Branch Name",
+            "value": "master",
+            "required": true
         },
         "MONGO_DB_URI": {
             "description": "fill with the mongodb url get from mongodb.cloud.com (don't use mine below !)",
