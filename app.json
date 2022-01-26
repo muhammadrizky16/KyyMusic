@@ -2,7 +2,7 @@
     "name": "KyyMusic",
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/muhamadrizky16/KyyXMusic",
+    "repository": "https://github.com/muhamadrizky16/KyyMusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
