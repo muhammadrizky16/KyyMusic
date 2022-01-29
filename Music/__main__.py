@@ -56,6 +56,7 @@ async def load_start():
     #Kalau clone atau fork jangan di hapus ya tolol
     await client.join_chat("NastySupportt")
     await client.join_chat("NastyProject")
+    await client.join_chat("ahhsudahlahhh")
     print("[INFO]: STARTED")
     
    
