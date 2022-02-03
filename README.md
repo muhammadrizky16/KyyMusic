@@ -54,6 +54,10 @@
 <a href="https://dashboard.heroku.com/new?template=https://github.com/muhammadrizky16/Music-Deploy"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="250""/</a>  
 <a href="https://telegram.dog/XTZ_HerokuBot?start=bXVoYW1tYWRyaXpreTE2L0t5eU11c2ljIG1hc3Rlcg"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
 
+### Support & Updates 
+<a href="https://t.me/NastySupportt"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/NastyProject"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
+
+
 ## Credits
 
 </details>
@@ -62,7 +66,6 @@
 <summary><b> TAP </b></summary>
 <br>
 
-## Credits
 - DaisyXMusic 
 - callmusic 
 - VCPlayerBot
@@ -104,6 +107,3 @@ YukkiMusicPlayer is a modified version of [Callsmusic](https://github.com/callsm
 > This project exists thanks to these awesome developers and their codes and contributions.
 > And credits goes to all who supported, all who helped and API & environmental requirement package devs and all projects helped in making this project.
 > Special thanks to you for using bot
-
-### Support & Updates 
-<a href="https://t.me/NastySupportt"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/NastyProject"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
