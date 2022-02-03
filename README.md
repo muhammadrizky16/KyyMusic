@@ -35,11 +35,6 @@
 - `/broadcast <reply to message>` - globally brodcast replied message to all chats
 - `/pmpermit [on/off]` - enable/disable pmpermit message
 
-#### Pmpermit
-- `.a` - approove someone to pm you
-- `.da` - disapproove someone to pm you
-- You can add a custom pmpermit message by adding var `PMMSG` and adding your message through env vars (for heroku, Settings/Edit vars)
-+ Sudo Users can execute any command in any groups
 
 ## String Session :
 [![GenerateStringName](https://img.shields.io/badge/repl.it-generateStringName-white)](https://replit.com/@rizkyhmdanii16/StringSession)
