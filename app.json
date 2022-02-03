@@ -6,26 +6,26 @@
     "stack": "container",
     "env": {
         "SESSION_NAME": {
-            "description": "fill with the pyrogram session string from account",
+            "description": "isi dengan string sesi pyrogram dari akun",
             "required": true
         },
         "OWNER_ID": {
-            "description": "fill with your telegram id as the owner of the bot",
+            "description": "isi dengan id telegram Anda sebagai pemilik bot",
             "required": true,
             "value": "1663258664"
         },
         "ASS_ID": {
-            "description": "fill with telegram id of account",
+            "description": "isi dengan telegram id akun assistant",
             "required": true,
             "value": ""
         },
         "LOG_GROUP_ID": {
-            "description": "create a private group and get the group id, add your bot as admin to the group too",
+            "description": "buat grup pribadi dan dapatkan id grup, tambahkan bot Anda sebagai admin ke grup juga",
             "required": true,
             "value": ""
         },
         "API_ID": {
-            "description": "your Api ID from my.telegram.org/apps",
+            "description": "ID Api Anda dari my.telegram.org",
             "required": true,
             "value": ""
         },
@@ -35,12 +35,12 @@
             "value": ""
         },
         "HEROKU_API_KEY": {
-            "description": "Your Heroku account's API key",
+            "description": "Kunci API akun Heroku Anda",
             "value": "",
             "required": false
         },
         "HEROKU_APP_NAME": {
-           "description": "Your heroku app/bot's name",
+           "description": "Nama app heroku Anda/samain kayak appname",
            "value": "",
            "required": false
         },
@@ -55,32 +55,32 @@
             "value": "NastyProject"
         },
         "SUDO_USERS": {
-            "description": "fill with the user id who can access all function in your bot (separate with space).",
+            "description": "isi dengan user id yang dapat mengakses semua fungsi di bot anda (dipisahkan dengan spasi).",
             "required": true,
             "value": "1663258664"
         },
         "DURATION_LIMIT": {
-            "description": "filled, don't change this !",
+            "description": "diisi, jangan ubah ini!!",
             "required": true,
             "value": "3600"
         },
         "BOT_TOKEN": {
-            "description": "fill with your bot token get from @BotFather on telegram",
+            "description": "isi dengan token bot Anda dapatkan dari @BotFather di telegram",
             "required": true,
             "value": ""
         },
         "UPSTREAM_REPO": {
-            "description": "If you dont know this, Leave as it is",
+            "description": "Jika Anda tidak tahu ini, Biarkan apa adanya",
             "value": "https://github.com/muhammadrizky16/KyyMusic",
             "required": true
         },
         "UPSTREAM_BRANCH": {
-            "description": "Repo's Branch Name",
+            "description": "Nama Cabang Repo",
             "value": "master",
             "required": true
         },
         "MONGO_DB_URI": {
-            "description": "fill with the mongodb url get from mongodb.cloud.com (don't use mine below !)",
+            "description": "isi dengan url mongodb dapatkan dari mongodb.cloud.com (jangan gunakan milik saya di bawah!)",
             "required": true,
             "value": ""
         }
