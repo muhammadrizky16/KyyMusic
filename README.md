@@ -55,6 +55,14 @@
 <a href="https://telegram.dog/XTZ_HerokuBot?start=bXVoYW1tYWRyaXpreTE2L0t5eU11c2ljIG1hc3Rlcg"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
 
 ## Credits
+
+</details>
+
+<details>
+<summary><b> TAP </b></summary>
+<br>
+
+## Credits
 - DaisyXMusic 
 - callmusic 
 - VCPlayerBot
