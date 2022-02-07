@@ -15,7 +15,6 @@ from pytgcalls import __version__ as pytover
 from Music.config import (
     GROUP,
     CHANNEL,
-    OWNER_USERNAME
 )
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
@@ -55,7 +54,6 @@ async def alive(client, message):
         photo=f"{KYY_IMG}",
         caption=f"""**Holla {message.from_user.mention()}.**
 ✘ **I'm Working Properly** \n\n"
-✘ **My Master : `{OWNER_USERNAME}`** \n\n"
 ✘ **Bot : Latest** \n\n"
 ✘ **Bot Info : Online** \n\n"
 ✘ **Uptime : `{uptime}`** \n\n"
