@@ -38,7 +38,7 @@ async def bug(_, message):
 
 🧑‍💼 Pengguna: {message.from_user.mention}
 💡 Group: {chatusername}
-🆔 Id: `{message.chat.id}`
+🆔 ID: `{message.chat.id}`
 
 💬 Pesan: {report}**
 """,
