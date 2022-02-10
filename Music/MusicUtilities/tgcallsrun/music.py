@@ -90,7 +90,7 @@ Title :- {ctitle}
 Downloading....
 
 {url}"""
-                okay = await smexy.send_message(LOG_GROUP_ID, f"{logger_text}", disable_web_page_preview=True)
+                okay = await app.send_message(LOG_GROUP_ID, f"{logger_text}", disable_web_page_preview=True)
                 try:
                     with yt_dlp.YoutubeDL(ytdl_opts) as ytdl:
                         x = ytdl.extract_info(url, download=False)
