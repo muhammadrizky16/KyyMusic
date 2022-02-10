@@ -1,6 +1,7 @@
 {
     "name": "KyyMusic",
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
+    "logo": "https://telegra.ph/file/2b610c918dec590d2777b.jpg",
     "keywords": ["music", "voice chat", "telegram"],
     "repository": "https://github.com/muhamadrizky16/KyyMusic",
     "stack": "container",
