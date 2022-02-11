@@ -99,7 +99,7 @@ async def stop_cmd(_, message):
         await music.pytgcalls.leave_group_call(chat_id)
     except:
         pass   
-    await message.reply_text("Menghapus Databae, Antrian, Log, File Mentah, Unduhan.")
+    await message.reply_text("Menghapus Database, Antrian, Log, File Mentah, Unduhan.")
     
 @app.on_message(filters.command(["pause", f"pause@{BOT_USERNAME}", "ps"]))
 async def pause_cmd(_, message): 
