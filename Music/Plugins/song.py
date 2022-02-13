@@ -307,21 +307,7 @@ def search_markup(
     buttons = [
         [
             InlineKeyboardButton(
-                text="¹", callback_data=f"beta {ID1}|{duration1}|{user_id}"
-            ),
-            InlineKeyboardButton(
-                text="²", callback_data=f"beta {ID2}|{duration2}|{user_id}"
-            ),
-            InlineKeyboardButton(
-                text="³", callback_data=f"beta {ID3}|{duration3}|{user_id}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⁴", callback_data=f"beta {ID4}|{duration4}|{user_id}"
-            ),
-            InlineKeyboardButton(
-                text="⁵", callback_data=f"beta {ID5}|{duration5}|{user_id}"
+                text="¹", callback_data=f"beta {ID1}|{duration1}|{user_id}"           
             ),
         ],
         [
@@ -355,17 +341,6 @@ def search_markup2(
         [
             InlineKeyboardButton(
                 text="⁶", callback_data=f"beta {ID6}|{duration6}|{user_id}"
-            ),
-            InlineKeyboardButton(
-                text="⁷", callback_data=f"beta {ID7}|{duration7}|{user_id}"
-            ),
-            InlineKeyboardButton(
-                text="⁸", callback_data=f"beta {ID8}|{duration8}|{user_id}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text="⁹", callback_data=f"beta {ID9}|{duration9}|{user_id}"
             ),
             InlineKeyboardButton(
                 text="¹⁰", callback_data=f"beta {ID10}|{duration10}|{user_id}"
