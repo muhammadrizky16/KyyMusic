@@ -251,7 +251,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         return
     try: 
         b = await app.get_chat_member(message.chat.id , ASSID) 
-        if b.status == "kicked":
+        if b.status == "banned":
             await app.unban_chat_member(message.chat.id, ASSID)
             invite_link = await app.export_chat_invite_link(message.chat.id)
             if "+" in invite_link:
