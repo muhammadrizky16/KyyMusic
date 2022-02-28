@@ -1,100 +1,32 @@
 import asyncio
-from Music import app, OWNER
-from pyrogram import filters, Client
-from pyrogram.types import Message
-from Music.MusicUtilities.database.chats import (get_served_chats, is_served_chat, add_served_chat, get_served_chats)
-from ..MusicUtilities.helpers.filters import command
+from pyrogram import Client, filters
+from pyrogram.types import Dialog, Chat, Message
+from pyrogram.errors import UserAlreadyParticipant
+from Music.config import OWNER_ID
+from Music.MusicUtilities.tgcallsrun import ASS_ACC as USER
 
 
-@app.on_message(filters.command("broadcast_pin") & filters.user(OWNER))
-async def broadcast_message_pin(_, message):
-    if not message.reply_to_message:
-        pass
-    else :
-        x = message.reply_to_message.message_id   
-        y = message.chat.id
-        sent = 0
-        pin = 0
-        chats = []
-        schats = await get_served_chats()
-        for chat in schats:
-            chats.append(int(chat["chat_id"]))
-        for i in chats:
-            try:
-                m = await app.forward_messages(i, y, x)
-                try:
-                    await m.pin(disable_notification=False)
-                    pin += 1
-                except Exception:
-                    pass
-                await asyncio.sleep(.3)
-                sent += 1
-            except Exception:
-                pass
-        await message.reply_text(f"✅ **Pesan yang disiarkan di {sent} obrolan\n\n📌 dengan {pin} pin.**")  
+@Client.on_message(filters.command("broadcast") & filters.user(OWNER_ID) & ~filters.edited)
+async def gcast(_, message: Message):
+    sent=0
+    failed=0
+    if message.from_user.id not in OWNER_ID:
         return
-    if len(message.command) < 2:
-        await message.reply_text("**Penggunaan**:\n/broadcast (message)")
-        return  
-    text = message.text.split(None, 1)[1]
-    sent = 0
-    pin = 0
-    chats = []
-    schats = await get_served_chats()
-    for chat in schats:
-        chats.append(int(chat["chat_id"]))
-    for i in chats:
-        try:
-            m = await app.send_message(i, text=text)
-            try:
-                await m.pin(disable_notification=False)
-                pin += 1
-            except Exception:
-                pass
-            await asyncio.sleep(.3)
-            sent += 1
-        except Exception:
-            pass
-    await message.reply_text(f"✅ **Pesan yang disiarkan di {sent} obrolan\n📌 dengan {pin} pin.**")
-
-
-@app.on_message(filters.command("broadcast") & filters.user(OWNER))
-async def broadcast_message_nopin(_, message):
-    if not message.reply_to_message:
-        pass
     else:
-        x = message.reply_to_message.message_id
-        y = message.chat.id
-        sent = 0
-        chats = []
-        schats = await get_served_chats()
-        for chat in schats:
-            chats.append(int(chat["chat_id"]))
-        for i in chats:
+        wtf = await message.reply("Sedang mengirim pesan global...")
+        if not message.reply_to_message:
+            await wtf.edit("Balas pesan teks apa pun untuk gcast")
+            return
+        lmao = message.reply_to_message.text
+        async for dialog in USER.iter_dialogs():
             try:
-                m = await app.forward_messages(i, y, x)
-                await asyncio.sleep(0.3)
-                sent += 1
-            except Exception:
-                pass
-        await message.reply_text(f"✅ **Pesan yang disiarkan dalam {sent} obrolan")
-        return
-    if len(message.command) < 2:
-        await message.reply_text(
-            "**usage**:\n/broadcast (message)"
-        )
-        return
-    text = message.text.split(None, 1)[1]
-    sent = 0
-    chats = []
-    schats = await get_served_chats()
-    for chat in schats:
-        chats.append(int(chat["chat_id"]))
-    for i in chats:
-        try:
-            m = await app.send_message(i, text=text)
-            await asyncio.sleep(0.3)
-            sent += 1
-        except Exception:
-            pass
-    await message.reply_text(f"✅ **Pesan yang disiarkan dalam {sent} obrolan")
+                await USER.send_message(dialog.chat.id, lmao)
+                sent = sent+1
+                await wtf.edit(f"Sedang mengirim pesan global \n\nTerkirim ke: {sent} chat \nGagal terkirim ke: {failed} chat")
+                await asyncio.sleep(0.7)
+            except:
+                failed=failed+1
+                await wtf.edit(f"Sedang mengirim pesan global \n\nTerkirim ke: {sent} Chats \nGagal terkirim ke: {failed} Chats")
+                await asyncio.sleep(0.7)
+
+        await message.reply_text(f"Pesan global selesai \n\nTerkirim ke: {sent} Chats \nGagal terkirim ke: {failed} Chats")
