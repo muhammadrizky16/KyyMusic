@@ -15,7 +15,7 @@ async def gcast(_, message: Message):
     else:
         wtf = await message.reply("Sedang mengirim pesan global...")
         if not message.reply_to_message:
-            await wtf.edit("Balas pesan teks apa pun untuk gcast")
+            await wtf.edit("Balas pesan teks apa pun untuk broadcast")
             return
         lmao = message.reply_to_message.text
         async for dialog in USER.iter_dialogs():
