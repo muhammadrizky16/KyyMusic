@@ -1,0 +1,35 @@
+#Recode by @UnrealYesus
+
+# KALO FORK/CLONE USERNAME YG DI ATAS  G USH DI HAPUSS YAA KONTOLL
+
+version: "3.9"
+
+services:
+
+  worker:
+
+    build: .
+
+    environment:
+
+      SESSION_NAME: $SESSION_NAME
+
+      API_ID: $API_ID
+
+      API_HASH: $API_HASH
+
+      MONGO_DB_URI: $MONGO_DB_URI
+
+      LOG_GROUP_ID: $LOG_GROUP_ID
+
+      BOT_TOKEN: $BOT_TOKEN
+
+      ASS_ID: $ASS_ID
+
+      OWNER_ID: $OWNER_ID
+      
+      DURATION_LIMIT: $DURATION_LIMIT
+
+      GROUP: $GROUP
+      
+      CHANNEL: $CHANNEL
