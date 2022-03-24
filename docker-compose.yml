@@ -23,3 +23,5 @@ services:
       MUSIC_BOT_NAME: $MUSIC_BOT_NAME
 
       OWNER_ID: $OWNER_ID
+      
+      DURATION_LIMIT: $DURATION_LIMIT
