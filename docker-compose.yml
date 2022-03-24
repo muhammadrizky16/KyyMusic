@@ -20,7 +20,7 @@ services:
 
       BOT_TOKEN: $BOT_TOKEN
 
-      MUSIC_BOT_NAME: $MUSIC_BOT_NAME
+      ASS_ID: $ASS_ID
 
       OWNER_ID: $OWNER_ID
       
