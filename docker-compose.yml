@@ -12,7 +12,7 @@ services:
 
     environment:
 
-      STRING_NAME: $STRING_NAME
+      SESSION_NAME: $SESSION_NAME
 
       API_ID: $API_ID
 
