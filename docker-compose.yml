@@ -8,7 +8,7 @@ services:
 
     environment:
 
-      STRING_SESSION: $STRING_SESSION
+      STRING_NAME: $STRING_NAME
 
       API_ID: $API_ID
 
@@ -25,3 +25,7 @@ services:
       OWNER_ID: $OWNER_ID
       
       DURATION_LIMIT: $DURATION_LIMIT
+
+      GROUP: $GROUP
+      
+      CHANNEL: $CHANNEL
