@@ -33,9 +33,5 @@ services:
       GROUP: $GROUP
       
       CHANNEL: $CHANNEL
-
-      UPSTREAM_REPO: $UPSTREAM_REPO
-  
-      UPSTREAM_BRANCH: $UPSTREAM_BRANCH
       
       SUDO_USERS: $SUDO_USERS
