@@ -5,7 +5,7 @@ from pyrogram.types import (
     InputMediaPhoto,
     Message,
 )
-from Music import BOT_NAME
+from Music import BOT_NAME, BOT_USERNAME
 from Music.config import GROUP, CHANNEL
 
 def play_markup(videoid, user_id):
@@ -258,7 +258,7 @@ def start_pannel():
                 ),
             ],
         ]
-        return f"🎛  **This is {MUSIC_BOT_NAME}*", buttons
+        return f"🎛  **This is {BOT_NAME}*", buttons
     if CHANNEL and not GROUP:
         buttons = [
             [
@@ -272,7 +272,7 @@ def start_pannel():
                 ),
             ],
         ]
-        return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
+        return f"🎛  **This is {BOT_NAME}**", buttons
     if CHANNEL and GROUP:
         buttons = [
             [
@@ -350,7 +350,7 @@ def private_panel():
                 ),
             ],
         ]
-        return f"🎛  **This is {MUSIC_BOT_NAME}**", buttons
+        return f"🎛  **This is {BOT_NAME}**", buttons
 
 
 def setting_markup():
@@ -541,7 +541,7 @@ stats5 = InlineKeyboardMarkup(
                 text="sʏsᴛᴇᴍ sᴛᴀᴛs", callback_data=f"sys_stats"
             ),
             InlineKeyboardButton(
-                text="sʏsᴛᴇᴍ sᴛᴀᴛs", callback_data=f"sto_stats"
+                text="sᴛᴏʀᴀɢᴇ sᴛᴀᴛs", callback_data=f"sto_stats"
             ),
         ],
         [
