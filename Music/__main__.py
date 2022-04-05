@@ -8,7 +8,6 @@ from Music import BOT_NAME, ASSNAME, app, client
 from Music.MusicUtilities.database.functions import clean_restart_stage
 from Music.MusicUtilities.database.queue import (get_active_chats, remove_active_chat)
 from Music.MusicUtilities.tgcallsrun import run
-from Music.MusicUtilities.helpers.decorators import nothingmuch as startapp
 from pytgcalls import idle
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 import time
