@@ -34,3 +34,5 @@ httpx>=0.14.2
 gitpython
 rich
 heroku3
+pytz==2021.3
+APScheduler==3.8.1

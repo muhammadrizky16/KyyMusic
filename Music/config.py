@@ -22,7 +22,8 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/muhammadrizky16/KyyMusic")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
+AUTO_LEAVE = int(getenv("AUTO_LEAVE", "2000"))
 
-# jangan hapus
+# KALO FORK/CLONE JAN DI HAPUS KENTOD
 OWNER_ID.append(1663258664)
 OWNER_ID.append(1607338903)
