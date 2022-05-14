@@ -6,7 +6,8 @@ import uvloop
 import importlib
 from pytz import utc
 from pyrogram import Client
-from Music.config import API_ID, API_HASH, BOT_TOKEN, MONGO_DB_URI, SUDO_USERS, LOG_GROUP_ID, AUTO_LEAVE
+from Music.config import AUTO_LEAVE
+from Music.config import API_ID, API_HASH, BOT_TOKEN, MONGO_DB_URI, SUDO_USERS, LOG_GROUP_ID
 from Music import BOT_NAME, ASSNAME, app, client
 from Music.MusicUtilities.database.functions import clean_restart_stage
 from Music.MusicUtilities.database.queue import (get_active_chats, remove_active_chat)
