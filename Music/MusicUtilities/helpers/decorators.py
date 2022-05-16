@@ -4,7 +4,7 @@ from typing import Callable, Dict, List
 from pyrogram import Client
 from pyrogram.types import Chat, Message
 
-from Music import SUDOERS,client app
+from Music import SUDOERS,client, app
 
 admins = {}
 
