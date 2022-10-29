@@ -4,14 +4,6 @@
   <img src="https://telegra.ph/file/2b610c918dec590d2777b.jpg">
 </p>
 
-<h3>Requirements 📝</h3>
-
-- FFmpeg (Latest)
-- NodeJS [nodesource.com](https://nodesource.com/) (NodeJS 17+)
-- Python (3.10+)
-- [PyTgCalls](https://github.com/pytgcalls/pytgcalls) (Lastest)
-- [MongoDB](https://cloud.mongodb.com/) (3.12.1)
-- [2nd Telegram Account](https://telegram.org/blog/themes-accounts#multiple-accounts) (needed for userbot)
 
 ### Commands 🛠
 #### For all in group
@@ -37,7 +29,7 @@
 
 
 ## String Session :
-[![GenerateStringName](https://img.shields.io/badge/repl.it-generateStringName-white)](https://replit.com/@rizkyhmdanii16/StringSession)
+[![GenerateStringName](https://img.shields.io/badge/generateStringName-white)](https://t.me/nastystringbot)
 
 
 The easy way to host this bot, deploy to Heroku, Change the app country to Europe (it will help to make the bot stable).
@@ -45,6 +37,19 @@ The easy way to host this bot, deploy to Heroku, Change the app country to Europ
 <a href="https://dashboard.heroku.com/new?template=https://github.com/muhammadrizky16/templat-music2"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="250""/</a>  
 <a href="https://telegram.dog/XTZ_HerokuBot?start=bXVoYW1tYWRyaXpreTE2L0t5eU11c2ljIG1hc3Rlcg"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="250""/</a>  </p>
 
+#### Deploy in your VPS
+````bash
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install python3-pip ffmpeg -y
+sudo pip3 install -U pip
+curl -fssL https://deb.nodesource.com/setup_17.x | sudo -E bash - && sudo apt-get install nodejs -y && npm i -g npm
+git clone https://github.com/muhammadrizky16/KyyMusic
+cd KyyMusic
+pip3 install -U -r requirements.txt
+nano sample.env
+cp sample.env .env
+python3 -m Music
+````
 ### Support & Updates 
 <a href="https://t.me/NastySupportt"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/NastyProject"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
 
