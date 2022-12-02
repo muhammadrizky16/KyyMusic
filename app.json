@@ -3,7 +3,7 @@
     "description": "Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
     "repository": "https://github.com/muhamadrizky16/KyyMusic",
-    "stack": "container",
+    "stack": "heroku-22",
     "env": {
         "SESSION_NAME": {
             "description": "isi dengan string sesi pyrogram dari akun",
@@ -93,7 +93,7 @@
     "formation": {
     "worker": {
       "quantity": 1,
-      "size": "free"
+      "size": "eco"
     }
   }
 }
